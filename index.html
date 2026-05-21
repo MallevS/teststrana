@@ -10,6 +10,9 @@
         content="ЕУРОИНГ - Градежна компанија со седиште во Гевгелија. Преку 20 години искуство во нискоградба, високоградба, хидроградба и механизација." />
     <meta name="theme-color" content="#141417">
     <!--=============== css  ===============-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/plugins.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
@@ -27,7 +30,27 @@
     <div id="main">
         <!-- header start  -->
         <header class="main-header">
-            <a href="index.html" class="header-logo"><img src="images/euroing.png" alt=""></a>
+            <a href="index.html" class="header-logo">
+                <img src="images/logo.svg" alt="">
+            </a>
+            <nav class="ei-desktop-nav" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="index.html" class="act-link">Почетна</a></li>
+                    <li><a href="about.html">За нас</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li class="ei-nav-projects">
+                        <a href="project-01.html">Проекти <i class="fal fa-angle-down"></i></a>
+                        <div class="ei-nav-dropdown">
+                            <a href="project-01.html">Автопат Смоквица</a>
+                            <a href="project-02.html">Мост во Богданци</a>
+                            <a href="project-04.html">Прочистителна Станица</a>
+                            <a href="project-06.html">Гимназија</a>
+                        </div>
+                    </li>
+                    <li><a href="contacts.html">Контакт</a></li>
+                </ul>
+            </nav>
+            <a href="contacts.html" class="ei-header-cta">Контакт</a>
             <!-- sidebar-button -->
             <!-- nav-button-wrap-->
             <div class="nav-button-wrap">
@@ -52,21 +75,7 @@
             </div>
             <!-- navigation  end -->
         </header>
-        <!-- header end -->
-        <!-- left-panel -->
-        <div class="left-panel">
-            <div class="horizonral-subtitle"><span><strong>ЕУРОИНГ · ГРАДЕЖНА КОМПАНИЈА</strong></span></div>
-
-            <div class="left-panel_social">
-                <ul>
-                    <li><a href="https://www.facebook.com/euroing.com.mk" target="_blank"><i
-                                class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="https://www.instagram.com/_euroing_gvg/?hl=en" target="_blank"><i
-                                class="fab fa-instagram"></i></a></li>
-                    <!-- <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li> -->
-                </ul>
-            </div>
-        </div>
+       
 
         <div id="wrapper">
             <!-- content-holder  -->
@@ -133,26 +142,39 @@
                         <!-- Overlays -->
                         <div class="ei-hero-overlay"></div>
                         <div class="ei-hero-vignette"></div>
-                        <!-- Gold vertical accent -->
-                        <div class="ei-hero-diagonal"></div>
-                        <!-- Ghost watermark -->
-                        <div class="ei-hero-watermark" aria-hidden="true">ЕУРОИНГ</div>
+
                         <!-- Content area -->
                         <div class="ei-hero-body">
                             <div class="ei-hero-content">
                                 <div class="ei-hero-eyebrow">
-                                    <span class="ei-hero-eyebrow-line"></span>
+
                                     <span class="ei-hero-eyebrow-text">Градежна Компанија · Гевгелија · МК</span>
                                 </div>
                                 <h1 class="ei-hero-h1">
-                                    <span class="l1">ЕУРОИНГ</span>
-                                    <span class="l2">Градежна Компанија · Основана 1998</span>
+                                    <span class="l1">Градење соништа со прецизност и извонредност.</span>
                                 </h1>
-                                <p class="ei-hero-sub">Над 20 години искуство во нискоградба, високоградба, хидроградба
-                                    и механизација на македонскиот и меѓународниот пазар.</p>
+                                <p class="ei-hero-sub">Специјализирани сме во претворање на визии во реалност со
+                                    исклучителна изработка и прецизно внимание на деталите. Со долгогодишно искуство и
+                                    посветеност на квалитетот.
+                                </p>
                                 <div class="ei-hero-btns">
-                                    <a href="about.html" class="ei-btn-primary">За нас</a>
-                                    <a href="contacts.html" class="ei-btn-outline">Контакт</a>
+                                    <a href="about.html" class="ei-btn-primary">За нас <svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M12.75 15L15.75 12M15.75 12L12.75 9M15.75 12H8.25M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z"
+                                                stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </svg></a>
+                                    <a href="contacts.html" class="ei-btn-outline">Контакт
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M12.75 15L15.75 12M15.75 12L12.75 9M15.75 12H8.25M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z"
+                                                stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
                             <div class="ei-hero-aside">
@@ -204,441 +226,162 @@
                         </div>
                     </section>
 
-                    <!-- ==================== ABOUT ==================== -->
-                    <section class="ei-about">
-                        <div class="ei-container">
-                            <div class="ei-about-grid">
-                                <div class="ei-about-img-wrapper">
-                                    <img src="project%20images/Precistitelna%20Stanica%20Gevgleija/DSC06213.JPG"
-                                        alt="Прочистителна Станица Гевгелија" loading="lazy">
-                                    <div class="ei-about-badge">
-                                        <strong>20<sup>+</sup></strong>
-                                        <small>Години<br>искуство</small>
-                                    </div>
-                                </div>
-                                <div class="ei-about-text">
-                                    <span class="ei-section-label">За нас</span>
-                                    <h2>По што се разликуваме<br>од другите?</h2>
-                                    <div class="ei-about-divider"></div>
-                                    <p>ЕУРОИНГ е градежна компанија со седиште во Гевгелија, основана со цел да обезбеди
-                                        висококвалитетни градежни услуги на македонскиот и меѓународниот пазар.</p>
-                                    <p>Нашето мото е непрестано да го зголемуваме капацитетот на производство, да ја
-                                        подобриме нашата ефикасност и да постигнуваме сè подобри финансиски резултати.
-                                        ЕУРОИНГ успева да го издигне имиџот за квалитет во очите на бројните клиенти.
-                                    </p>
-                                    <a href="about.html" class="ei-btn-primary">Дознај повеќе <i
-                                            class="fal fa-long-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- ==================== WHY US ==================== -->
-                    <section class="ei-why">
-                        <div class="ei-container">
-                            <div class="ei-section-header">
-                                <span class="ei-section-label">Наши вредности</span>
-                                <h2>Зошто да изберете<br>ЕУРОИНГ?</h2>
-                            </div>
-                            <div class="ei-why-grid">
-                                <div class="ei-why-card">
-                                    <div class="ei-why-icon">
-                                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <circle cx="12" cy="8" r="7" />
-                                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
-                                        </svg>
-                                    </div>
-                                    <h3>20+ Години Искуство</h3>
-                                    <p>Повеќе од две децении активно работење на македонскиот и меѓународниот градежен
-                                        пазар.</p>
-                                </div>
-                                <div class="ei-why-card">
-                                    <div class="ei-why-icon">
-                                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                                        </svg>
-                                    </div>
-                                    <h3>Висок Квалитет</h3>
-                                    <p>Применуваме современа технологија и работиме по највисоки стандарди за квалитет
-                                        на сите проекти.</p>
-                                </div>
-                                <div class="ei-why-card">
-                                    <div class="ei-why-icon">
-                                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                                        </svg>
-                                    </div>
-                                    <h3>Навреме и Точно</h3>
-                                    <p>Проектите ги реализираме во договорените рокови, со целосна транспарентност во
-                                        секоја фаза.</p>
-                                </div>
-                                <div class="ei-why-card">
-                                    <div class="ei-why-icon">
-                                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <rect x="2" y="3" width="20" height="14" rx="2" />
-                                            <line x1="8" y1="21" x2="16" y2="21" />
-                                            <line x1="12" y1="17" x2="12" y2="21" />
-                                        </svg>
-                                    </div>
-                                    <h3>Модерна Механизација</h3>
-                                    <p>Располагаме со современа тешка механизација и стручен тим за секој вид на
-                                        градежни работи.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- ==================== SERVICES ==================== -->
-                    <section class="ei-services">
-                        <div class="ei-container">
-                            <div class="ei-section-header">
-                                <span class="ei-section-label">Нашите дејности</span>
-                                <h2>Со стручност и преданост<br>до секој проект</h2>
-                            </div>
-                            <div class="ei-services-grid">
-                                <div class="ei-service-card">
-                                    <div class="ei-service-num">01</div>
-                                    <div class="ei-service-icon">
-                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path d="M3 12h18M3 6h18M3 18h18" />
-                                            <rect x="1" y="3" width="22" height="18" rx="2" />
-                                        </svg>
-                                    </div>
-                                    <h3>Нискоградба</h3>
-                                    <p>Изградба и реконструкција на патишта, улици, автопати, канали, цевководи и
-                                        сообраќајни пропусти.</p>
-                                    <a href="services.html" class="ei-service-link">Повеќе <i
-                                            class="fal fa-long-arrow-right"></i></a>
-                                </div>
-                                <div class="ei-service-card">
-                                    <div class="ei-service-num">02</div>
-                                    <div class="ei-service-icon">
-                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <rect x="2" y="7" width="20" height="15" rx="1" />
-                                            <path d="M16 7V5a2 2 0 00-8 0v2" />
-                                            <line x1="12" y1="12" x2="12" y2="16" />
-                                        </svg>
-                                    </div>
-                                    <h3>Високоградба</h3>
-                                    <p>Изградба на станбени и нестанбени објекти, административни згради, производствени
-                                        хали и јавни установи.</p>
-                                    <a href="services.html" class="ei-service-link">Повеќе <i
-                                            class="fal fa-long-arrow-right"></i></a>
-                                </div>
-                                <div class="ei-service-card">
-                                    <div class="ei-service-num">03</div>
-                                    <div class="ei-service-icon">
-                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" />
-                                            <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
-                                        </svg>
-                                    </div>
-                                    <h3>Хидроградба</h3>
-                                    <p>Изградба на прочистителни станици, брани, канали, резервоари и хидротехнички
-                                        објекти.</p>
-                                    <a href="services.html" class="ei-service-link">Повеќе <i
-                                            class="fal fa-long-arrow-right"></i></a>
-                                </div>
-                                <div class="ei-service-card">
-                                    <div class="ei-service-num">04</div>
-                                    <div class="ei-service-icon">
-                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="3" />
-                                            <path
-                                                d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M12 2v2M12 20v2M2 12h2M20 12h2M19.07 19.07l-1.41-1.41M4.93 19.07l1.41-1.41" />
-                                        </svg>
-                                    </div>
-                                    <h3>Механизација</h3>
-                                    <p>Целосна механизација за сите видови земјани работи, ископи, насипи и транспорт на
-                                        материјали.</p>
-                                    <a href="services.html" class="ei-service-link">Повеќе <i
-                                            class="fal fa-long-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- ==================== GALLERY ==================== -->
-                    <section class="ei-gallery">
+                    <!-- ==================== PROJECTS ==================== -->
+                    <section class="ei-projects">
                         <div class="ei-container-wide">
                             <div class="ei-section-header">
-                                <span class="ei-section-label">Портфолио</span>
-                                <h2>Издвоени проекти</h2>
+                                <span class="ei-section-label">Нашите услуги</span>
+                                <h2>Нашите градежни услуги</h2>
+                                <p class="ei-section-subtitle">Специјализирани сме за широк спектар на градежни услуги, вклучувајќи станбени, комерцијални и индустриски проекти.
+</p>
                             </div>
-                            <div class="ei-gallery-filters">
-                                <button class="ei-filter-btn active" data-filter="all">Сите</button>
-                                <button class="ei-filter-btn" data-filter="infrastruktura">Инфраструктура</button>
-                                <button class="ei-filter-btn" data-filter="visokogradba">Високоградба</button>
-                                <button class="ei-filter-btn" data-filter="hidrogradba">Хидроградба</button>
-                            </div>
-                            <div class="ei-gallery-grid" id="eiGallery">
 
-                                <div class="ei-gallery-item wide" data-cat="infrastruktura">
-                                    <img src="project%20images/Avtopat%20Smokvica%20Gevgelija/IMG_1748.JPG"
-                                        alt="Автопат Смоквица - Гевгелија" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Инфраструктура</div>
-                                        <p class="ei-gallery-title">Автопат Смоквица – Гевгелија</p>
+                            <div class="ei-projects-grid">
+
+                                <!-- Project 1 -->
+                                <div class="ei-project-card">
+                                    <div class="ei-project-card-num">01</div>
+                                    <div class="ei-project-image"
+                                        style="background-image:url('project%20images/Avtopat%20Smokvica%20Gevgelija/IMG_1748.JPG')">
                                     </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Avtopat%20Smokvica%20Gevgelija/IMG_1748.JPG"
-                                        data-caption="Автопат Смоквица – Гевгелија"><i class="fal fa-expand"></i></span>
+                                    <div class="ei-project-content">
+                                        <h3>Автопат Смоквица</h3>
+                                        <p class="ei-project-desc">Изградба и реконструкција на делница со современи инфраструктурни стандарди.</p>
+                                        <a href="project-01.html" class="ei-project-link">Повеќе <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.75 15L15.75 12M15.75 12L12.75 9M15.75 12H8.25M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+                                    </div>
                                 </div>
 
-                                <div class="ei-gallery-item" data-cat="hidrogradba">
-                                    <img src="project%20images/Precistitelna%20Stanica%20Gevgleija/DSC05688.JPG"
-                                        alt="Прочистителна Станица" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Хидроградба</div>
-                                        <p class="ei-gallery-title">Прочистителна Станица Гевгелија</p>
+                                <!-- Project 2 -->
+                                <div class="ei-project-card">
+                                    <div class="ei-project-card-num">02</div>
+                                    <div class="ei-project-image"
+                                        style="background-image:url('project%20images/Most/2014-03-17%2015.39.45.jpg')">
                                     </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Precistitelna%20Stanica%20Gevgleija/DSC05688.JPG"
-                                        data-caption="Прочистителна Станица Гевгелија"><i
-                                            class="fal fa-expand"></i></span>
+                                    <div class="ei-project-content">
+                                        <h3>Мост во Богданци</h3>
+                                        <p class="ei-project-desc">Клучен објект за поврзување, реализиран со висока носивост и стабилност.</p>
+                                        <a href="project-02.html" class="ei-project-link">Повеќе <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.75 15L15.75 12M15.75 12L12.75 9M15.75 12H8.25M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+                                    </div>
                                 </div>
 
-                                <div class="ei-gallery-item tall" data-cat="visokogradba">
-                                    <img src="project%20images/Zgradi/20170128_113458.jpg" alt="Згради" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Високоградба</div>
-                                        <p class="ei-gallery-title">Стамбени Згради</p>
+                                <!-- Project 3 -->
+                                <div class="ei-project-card">
+                                    <div class="ei-project-card-num">03</div>
+                                    <div class="ei-project-image"
+                                        style="background-image:url('project%20images/Izgradba%20na%20kanal%20Raulj/20160325_113220.jpg')">
                                     </div>
-                                    <span class="ei-gallery-zoom" data-src="project%20images/Zgradi/20170128_113458.jpg"
-                                        data-caption="Стамбени Згради"><i class="fal fa-expand"></i></span>
+                                    <div class="ei-project-content">
+                                        <h3>Канал Raulj</h3>
+                                        <p class="ei-project-desc">Инфраструктурен зафат за ефикасно одведување и контрола на атмосферски води.</p>
+                                        <a href="project-03.html" class="ei-project-link">Повеќе <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.75 15L15.75 12M15.75 12L12.75 9M15.75 12H8.25M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+                                    </div>
                                 </div>
 
-                                <div class="ei-gallery-item" data-cat="infrastruktura">
-                                    <img src="project%20images/Most/2014-03-17%2015.39.45.jpg" alt="Мост"
-                                        loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Инфраструктура</div>
-                                        <p class="ei-gallery-title">Мост во Богданци</p>
+                                <!-- Project 4 -->
+                                <div class="ei-project-card">
+                                    <div class="ei-project-card-num">04</div>
+                                    <div class="ei-project-image"
+                                        style="background-image:url('project%20images/Precistitelna%20Stanica%20Gevgleija/DSC06213.JPG')">
                                     </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Most/2014-03-17%2015.39.45.jpg"
-                                        data-caption="Мост во Богданци"><i class="fal fa-expand"></i></span>
+                                    <div class="ei-project-content">
+                                        <h3>Прочистителна Станица</h3>
+                                        <p class="ei-project-desc">Хидротехнички проект за третман на отпадни води и заштита на животната средина.</p>
+                                        <a href="project-04.html" class="ei-project-link">Повеќе <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.75 15L15.75 12M15.75 12L12.75 9M15.75 12H8.25M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+                                    </div>
                                 </div>
 
-                                <div class="ei-gallery-item" data-cat="infrastruktura">
-                                    <img src="project%20images/Izgradba%20na%20kanal%20Raulj/20160325_113220.jpg"
-                                        alt="Канал Raulj" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Инфраструктура</div>
-                                        <p class="ei-gallery-title">Изградба на Канал Raulj</p>
+                                <!-- Project 5 -->
+                                <div class="ei-project-card">
+                                    <div class="ei-project-card-num">05</div>
+                                    <div class="ei-project-image"
+                                        style="background-image:url('project%20images/Zgradi/20170128_113458.jpg')">
                                     </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Izgradba%20na%20kanal%20Raulj/20160325_113220.jpg"
-                                        data-caption="Изградба на Канал Raulj"><i class="fal fa-expand"></i></span>
+                                    <div class="ei-project-content">
+                                        <h3>Станбени Згради</h3>
+                                        <p class="ei-project-desc">Современи станбени објекти со функционални решенија и висок квалитет на изведба.</p>
+                                        <a href="project-05.html" class="ei-project-link">Повеќе <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.75 15L15.75 12M15.75 12L12.75 9M15.75 12H8.25M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+                                    </div>
                                 </div>
 
-                                <div class="ei-gallery-item" data-cat="visokogradba">
-                                    <img src="project%20images/Gimnazija/52188085_387560688460815_249762982601424896_n.jpg"
-                                        alt="Гимназија" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Високоградба</div>
-                                        <p class="ei-gallery-title">Гимназија</p>
+                                <!-- Project 6 -->
+                                <div class="ei-project-card">
+                                    <div class="ei-project-card-num">06</div>
+                                    <div class="ei-project-image"
+                                        style="background-image:url('project%20images/Gimnazija/52188085_387560688460815_249762982601424896_n.jpg')">
                                     </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Gimnazija/52188085_387560688460815_249762982601424896_n.jpg"
-                                        data-caption="Гимназија"><i class="fal fa-expand"></i></span>
+                                    <div class="ei-project-content">
+                                        <h3>Гимназија</h3>
+                                        <p class="ei-project-desc">Изградба и уредување на образовен објект според современи наставни стандарди.</p>
+                                        <a href="project-06.html" class="ei-project-link">Повеќе <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.75 15L15.75 12M15.75 12L12.75 9M15.75 12H8.25M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+                                    </div>
                                 </div>
 
-                                <div class="ei-gallery-item wide" data-cat="infrastruktura">
-                                    <img src="project%20images/Pristapni%20patista%20za%20Veternici%202024/20240827_103909.jpg"
-                                        alt="Ветерници 2024" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Инфраструктура</div>
-                                        <p class="ei-gallery-title">Пристапни Патишта за Ветерници 2024</p>
+                                <!-- Project 7 -->
+                                <div class="ei-project-card">
+                                    <div class="ei-project-card-num">07</div>
+                                    <div class="ei-project-image"
+                                        style="background-image:url('project%20images/Proizvodstvena%20Hala/20160416_131140.jpg')">
                                     </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Pristapni%20patista%20za%20Veternici%202024/20240827_103909.jpg"
-                                        data-caption="Пристапни Патишта за Ветерници 2024"><i
-                                            class="fal fa-expand"></i></span>
+                                    <div class="ei-project-content">
+                                        <h3>Производствена Хала</h3>
+                                        <p class="ei-project-desc">Индустриски објект со цврста конструкција и оптимизирана функционалност.</p>
+                                        <a href="project-07.html" class="ei-project-link">Повеќе <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.75 15L15.75 12M15.75 12L12.75 9M15.75 12H8.25M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+                                    </div>
                                 </div>
 
-                                <div class="ei-gallery-item" data-cat="visokogradba">
-                                    <img src="project%20images/Proizvodstvena%20Hala/20160416_131140.jpg"
-                                        alt="Производствена Хала" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Високоградба</div>
-                                        <p class="ei-gallery-title">Производствена Хала</p>
+                                <!-- Project 8 -->
+                                <div class="ei-project-card">
+                                    <div class="ei-project-card-num">08</div>
+                                    <div class="ei-project-image"
+                                        style="background-image:url('project%20images/Uici%20Gevgelija/IMG-0c269c583efd8f817380bf601bf86900-V.jpg')">
                                     </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Proizvodstvena%20Hala/20160416_131140.jpg"
-                                        data-caption="Производствена Хала"><i class="fal fa-expand"></i></span>
+                                    <div class="ei-project-content">
+                                        <h3>Улици Гевгелија</h3>
+                                        <p class="ei-project-desc">Реконструкција на урбана патна мрежа со подобрена безбедност и издржливост.</p>
+                                        <a href="project-08.html" class="ei-project-link">Повеќе <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.75 15L15.75 12M15.75 12L12.75 9M15.75 12H8.25M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+                                    </div>
                                 </div>
 
-                                <div class="ei-gallery-item" data-cat="hidrogradba">
-                                    <img src="project%20images/Precistitelna%20Stanica%20Gevgleija/DSC06213.JPG"
-                                        alt="Прочистителна Станица" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Хидроградба</div>
-                                        <p class="ei-gallery-title">Прочистителна Станица – детали</p>
+                                <!-- Project 9 -->
+                                <div class="ei-project-card">
+                                    <div class="ei-project-card-num">09</div>
+                                    <div class="ei-project-image"
+                                        style="background-image:url('project%20images/Pristapni%20patista%20za%20Veternici%202024/20240827_103909.jpg')">
                                     </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Precistitelna%20Stanica%20Gevgleija/DSC06213.JPG"
-                                        data-caption="Прочистителна Станица – детали"><i
-                                            class="fal fa-expand"></i></span>
+                                    <div class="ei-project-content">
+                                        <h3>Пристапни Патишта</h3>
+                                        <p class="ei-project-desc">Изведба на пристапни правци за сигурен и ефикасен пристап до инфраструктурни точки.</p>
+                                        <a href="project-09.html" class="ei-project-link">Повеќе <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.75 15L15.75 12M15.75 12L12.75 9M15.75 12H8.25M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+                                    </div>
                                 </div>
 
-                                <div class="ei-gallery-item" data-cat="infrastruktura">
-                                    <img src="project%20images/Gabioni/2014-03-17%2015.40.01.jpg" alt="Габиони"
-                                        loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Инфраструктура</div>
-                                        <p class="ei-gallery-title">Габиони</p>
+                                <!-- Project 10 -->
+                                <div class="ei-project-card">
+                                    <div class="ei-project-card-num">10</div>
+                                    <div class="ei-project-image"
+                                        style="background-image:url('project%20images/Pontonski%20Pristanista/IMG-20130512-00035.jpg')">
                                     </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Gabioni/2014-03-17%2015.40.01.jpg"
-                                        data-caption="Габиони"><i class="fal fa-expand"></i></span>
+                                    <div class="ei-project-content">
+                                        <h3>Понтонски Пристаништа</h3>
+                                        <p class="ei-project-desc">Специјализирани водни конструкции за сигурно прифаќање и пристап на пловила.</p>
+                                        <a href="project-10.html" class="ei-project-link">Повеќе <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.75 15L15.75 12M15.75 12L12.75 9M15.75 12H8.25M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+                                    </div>
                                 </div>
 
-                                <div class="ei-gallery-item" data-cat="infrastruktura">
-                                    <img src="project%20images/Uici%20Gevgelija/IMG-0c269c583efd8f817380bf601bf86900-V.jpg"
-                                        alt="Улици Гевгелија" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Инфраструктура</div>
-                                        <p class="ei-gallery-title">Улици Гевгелија</p>
+                                <!-- Project 11 -->
+                                <div class="ei-project-card">
+                                    <div class="ei-project-card-num">11</div>
+                                    <div class="ei-project-image"
+                                        style="background-image:url('project%20images/Gabioni/2014-03-17%2015.40.01.jpg')">
                                     </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Uici%20Gevgelija/IMG-0c269c583efd8f817380bf601bf86900-V.jpg"
-                                        data-caption="Улици Гевгелија"><i class="fal fa-expand"></i></span>
-                                </div>
-
-                                <div class="ei-gallery-item" data-cat="infrastruktura">
-                                    <img src="project%20images/Pontonski%20Pristanista/IMG-20130512-00035.jpg"
-                                        alt="Понтонски Пристаништа" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Инфраструктура</div>
-                                        <p class="ei-gallery-title">Понтонски Пристаништа</p>
+                                    <div class="ei-project-content">
+                                        <h3>Габиони</h3>
+                                        <p class="ei-project-desc">Заштитни конструкции против ерозија и стабилизација на косини и речни корита.</p>
+                                        <a href="project-11.html" class="ei-project-link">Повеќе <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.75 15L15.75 12M15.75 12L12.75 9M15.75 12H8.25M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
                                     </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Pontonski%20Pristanista/IMG-20130512-00035.jpg"
-                                        data-caption="Понтонски Пристаништа"><i class="fal fa-expand"></i></span>
-                                </div>
-
-                                <div class="ei-gallery-item wide" data-cat="infrastruktura">
-                                    <img src="project%20images/Pristapni%20patista%20za%20Veternici%202024/20250116_132656.jpg"
-                                        alt="Ветерници – Пристапни Патишта 2025" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Инфраструктура</div>
-                                        <p class="ei-gallery-title">Ветерници – Пристапни Патишта 2025</p>
-                                    </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Pristapni%20patista%20za%20Veternici%202024/20250116_132656.jpg"
-                                        data-caption="Ветерници – Пристапни Патишта 2025"><i
-                                            class="fal fa-expand"></i></span>
-                                </div>
-
-                                <div class="ei-gallery-item" data-cat="hidrogradba">
-                                    <img src="project%20images/Precistitelna%20Stanica%20Gevgleija/DSC06568.JPG"
-                                        alt="Прочистителна Станица – Изградба" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Хидроградба</div>
-                                        <p class="ei-gallery-title">Прочистителна Станица – Изградба</p>
-                                    </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Precistitelna%20Stanica%20Gevgleija/DSC06568.JPG"
-                                        data-caption="Прочистителна Станица – Изградба"><i
-                                            class="fal fa-expand"></i></span>
-                                </div>
-
-                                <div class="ei-gallery-item" data-cat="visokogradba">
-                                    <img src="project%20images/Zgradi/20170510_115241.jpg"
-                                        alt="Станбени Згради – Гевгелија" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Високоградба</div>
-                                        <p class="ei-gallery-title">Станбени Згради – Гевгелија</p>
-                                    </div>
-                                    <span class="ei-gallery-zoom" data-src="project%20images/Zgradi/20170510_115241.jpg"
-                                        data-caption="Станбени Згради – Гевгелија"><i class="fal fa-expand"></i></span>
-                                </div>
-
-                                <div class="ei-gallery-item" data-cat="infrastruktura">
-                                    <img src="project%20images/Avtopat%20Smokvica%20Gevgelija/IMG_1907.JPG"
-                                        alt="Автопат Смоквица – Изградба" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Инфраструктура</div>
-                                        <p class="ei-gallery-title">Автопат Смоквица – Изградба</p>
-                                    </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Avtopat%20Smokvica%20Gevgelija/IMG_1907.JPG"
-                                        data-caption="Автопат Смоквица – Изградба"><i class="fal fa-expand"></i></span>
-                                </div>
-
-                                <div class="ei-gallery-item" data-cat="infrastruktura">
-                                    <img src="project%20images/Izgradba%20na%20kanal%20Raulj/20160328_153032.jpg"
-                                        alt="Канал Raulj – Изградба" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Инфраструктура</div>
-                                        <p class="ei-gallery-title">Канал Raulj – Изградба</p>
-                                    </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Izgradba%20na%20kanal%20Raulj/20160328_153032.jpg"
-                                        data-caption="Канал Raulj – Изградба"><i class="fal fa-expand"></i></span>
-                                </div>
-
-                                <div class="ei-gallery-item" data-cat="hidrogradba">
-                                    <img src="project%20images/Precistitelna%20Stanica%20Gevgleija/DSC06678.JPG"
-                                        alt="Прочистителна Станица – Финализација" loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Хидроградба</div>
-                                        <p class="ei-gallery-title">Прочистителна Станица – Финализација</p>
-                                    </div>
-                                    <span class="ei-gallery-zoom"
-                                        data-src="project%20images/Precistitelna%20Stanica%20Gevgleija/DSC06678.JPG"
-                                        data-caption="Прочистителна Станица – Финализација"><i
-                                            class="fal fa-expand"></i></span>
-                                </div>
-
-                                <div class="ei-gallery-item" data-cat="infrastruktura">
-                                    <img src="project%20images/Most/20160817_112353.jpg" alt="Мост – Богданци"
-                                        loading="lazy">
-                                    <div class="ei-gallery-overlay">
-                                        <div class="ei-gallery-cat">Инфраструктура</div>
-                                        <p class="ei-gallery-title">Мост – Изградба Богданци</p>
-                                    </div>
-                                    <span class="ei-gallery-zoom" data-src="project%20images/Most/20160817_112353.jpg"
-                                        data-caption="Мост – Изградба Богданци"><i class="fal fa-expand"></i></span>
                                 </div>
 
                             </div>
-                            <div style="text-align:center; margin-top: 52px;">
-                                <a href="services.html" class="ei-btn-outline">Дознај повеќе за нашите услуги &nbsp;<i
-                                        class="fal fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- ==================== PARALLAX STRIP ==================== -->
-                    <section class="ei-parallax"
-                        style="background-image:url('project%20images/Avtopat%20Smokvica%20Gevgelija/IMG_2028.JPG')">
-                        <div class="ei-parallax-overlay"></div>
-                        <div class="ei-parallax-inner">
-                            <span class="ei-section-label">Нашата визија</span>
-                            <blockquote>
-                                <p>"Преку зголемен број задоволни инвеститори, партнерство со водечки компании и примена
-                                    на современа технологија, да ја зголемиме довербата на инвеститорите и партнерите."
-                                </p>
-                            </blockquote>
-                            <span class="ei-parallax-cite">— Генерален Директор, ЕУРОИНГ Гевгелија</span>
                         </div>
                     </section>
 
@@ -709,89 +452,9 @@
     <script type="text/javascript" src="js/scripts.js"></script>
 
     <script>
-        /* ===== EUROING HOMEPAGE — Gallery Filter + Lightbox ===== */
+        /* ===== EUROING HOMEPAGE — Hero + Stats ===== */
         (function () {
             'use strict';
-
-            /* --- Gallery filter --- */
-            var filterBtns = document.querySelectorAll('.ei-filter-btn');
-            var galleryItems = document.querySelectorAll('#eiGallery .ei-gallery-item');
-
-            filterBtns.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    var filter = this.getAttribute('data-filter');
-
-                    filterBtns.forEach(function (b) { b.classList.remove('active'); });
-                    this.classList.add('active');
-
-                    galleryItems.forEach(function (item) {
-                        if (filter === 'all' || item.getAttribute('data-cat') === filter) {
-                            item.classList.remove('hidden');
-                        } else {
-                            item.classList.add('hidden');
-                        }
-                    });
-                });
-            });
-
-            /* --- Lightbox --- */
-            var lb = document.getElementById('eiLightbox');
-            var lbImg = document.getElementById('eiLbImg');
-            var lbCaption = document.getElementById('eiLbCaption');
-            var lbClose = document.getElementById('eiLbClose');
-            var lbPrev = document.getElementById('eiLbPrev');
-            var lbNext = document.getElementById('eiLbNext');
-            var zoomBtns = document.querySelectorAll('.ei-gallery-zoom');
-            var currentIdx = 0;
-            var visibleSrcs = [];
-
-            function buildVisible() {
-                visibleSrcs = [];
-                zoomBtns.forEach(function (z) {
-                    if (!z.closest('.ei-gallery-item').classList.contains('hidden')) {
-                        visibleSrcs.push({ src: z.getAttribute('data-src'), cap: z.getAttribute('data-caption') });
-                    }
-                });
-            }
-
-            function openLb(idx) {
-                buildVisible();
-                if (!visibleSrcs.length) return;
-                currentIdx = ((idx % visibleSrcs.length) + visibleSrcs.length) % visibleSrcs.length;
-                lbImg.src = visibleSrcs[currentIdx].src;
-                lbImg.alt = visibleSrcs[currentIdx].cap;
-                lbCaption.textContent = visibleSrcs[currentIdx].cap;
-                lb.classList.add('open');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeLb() {
-                lb.classList.remove('open');
-                lbImg.src = '';
-                document.body.style.overflow = '';
-            }
-
-            zoomBtns.forEach(function (btn, i) {
-                btn.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    buildVisible();
-                    var src = btn.getAttribute('data-src');
-                    var idx = visibleSrcs.findIndex(function (v) { return v.src === src; });
-                    openLb(idx >= 0 ? idx : 0);
-                });
-            });
-
-            lbClose.addEventListener('click', closeLb);
-            lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
-            lbPrev.addEventListener('click', function () { openLb(currentIdx - 1); });
-            lbNext.addEventListener('click', function () { openLb(currentIdx + 1); });
-
-            document.addEventListener('keydown', function (e) {
-                if (!lb.classList.contains('open')) return;
-                if (e.key === 'Escape') closeLb();
-                if (e.key === 'ArrowLeft') openLb(currentIdx - 1);
-                if (e.key === 'ArrowRight') openLb(currentIdx + 1);
-            });
 
             /* --- Hero slideshow --- */
             (function () {
