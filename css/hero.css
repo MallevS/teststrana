@@ -1,0 +1,280 @@
+/* ==================== HERO SECTION BASE ==================== */
+.ei-hero {
+    position: relative;
+    height: 100vh;
+    height: 100dvh; /* Fixes mobile viewport jumping caused by address bars */
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #2a2245;
+}
+
+.ei-hero-slides {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.ei-hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.06);
+    transition: opacity 1.4s ease, transform 9s ease;
+}
+
+.ei-hero-slide.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.ei-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.48);
+}
+
+.ei-hero-vignette {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: radial-gradient(circle at 50% 50%, transparent 20%, rgba(20, 14, 50, 0.65) 100%);
+}
+
+.ei-hero-diagonal {
+    position: absolute;
+    z-index: 3;
+    left: 56px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            rgba(235, 127, 59, 0.5) 20%,
+            rgba(235, 127, 59, 0.85) 50%,
+            rgba(235, 127, 59, 0.5) 80%,
+            transparent 100%);
+}
+
+.ei-hero-watermark {
+    position: absolute;
+    z-index: 2;
+    right: -20px;
+    bottom: 80px;
+    font-size: clamp(90px, 14vw, 200px);
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(235, 127, 59, 0.05);
+    letter-spacing: -4px;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.ei-hero-body {
+    position: relative;
+    z-index: 5;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 60px; /* Balanced default container padding */
+}
+
+.ei-hero-content {
+    width: 100%;
+    max-width: 920px;
+    text-align: center;
+    animation: ei-fadein 1.2s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+@keyframes ei-fadein {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Eyebrow / Top Label */
+.ei-hero-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.ei-hero-eyebrow-line {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #eb7f3b;
+    flex-shrink: 0;
+}
+
+.ei-hero-eyebrow-text {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 0.15em;
+    color: #ffb400;
+}
+
+/* Typography Header */
+.ei-hero-h1 {
+    display: block;
+    margin: 0 0 24px;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.ei-hero-h1 span {
+    display: block;
+}
+
+.ei-hero-h1 .l1 {
+    font-size: clamp(38px, 5.5vw, 72px); /* Smooth, proportional scaling fluid typography */
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.ei-hero-h1 .l1::after {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 2px;
+    background: #eb7f3b;
+    margin: 20px auto;
+}
+
+.ei-hero-sub {
+    font-size: clamp(16px, 1.8vw, 19px);
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+    max-width: 720px;
+    margin: 0 auto 36px;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Actions Wrapper */
+.ei-hero-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hidden elements utilities if needed later */
+.ei-hero-aside, 
+.ei-hero-thumbs, 
+.ei-hero-scroll {
+    display: none;
+}
+
+
+/* ==================== BREAKPOINTS (LARGEST TO SMALLEST) ==================== */
+
+/* Laptops & Tablets (Horizontal) */
+@media (max-width: 1100px) {
+    .ei-hero-body {
+        padding: 0 40px;
+    }
+    
+    .ei-hero-diagonal {
+        left: 32px; /* Pulls the accent line closer to the edge */
+    }
+
+    .ei-hero-watermark {
+        opacity: 0.6; /* Softens contrast as screen narrows down */
+        bottom: 60px;
+    }
+}
+
+/* Tablets (Portrait) */
+@media (max-width: 768px) {
+    .ei-hero {
+        min-height: 560px; /* Safe minimum vertical clearance for text layout stacks */
+    }
+
+    .ei-hero-body {
+        padding: 0 24px;
+    }
+
+    .ei-hero-diagonal {
+        left: 16px;
+    }
+
+    .ei-hero-eyebrow {
+        margin-bottom: 16px;
+    }
+
+    .ei-hero-h1 .l1 {
+        letter-spacing: -0.01em;
+    }
+
+    .ei-hero-sub {
+        margin-bottom: 32px;
+        line-height: 1.6;
+    }
+    
+    /* Drops watermark cleanly out of layout to guarantee readable contrast */
+    .ei-hero-watermark {
+        display: none; 
+    }
+}
+
+/* Small Mobile Devices (Smartphones) */
+@media (max-width: 480px) {
+    .ei-hero {
+        min-height: 500px;
+    }
+
+    .ei-hero-body {
+        padding: 0 20px;
+        padding-top: 50px;
+    }
+
+    .ei-hero-diagonal {
+        display: none; /* Strip decorative accents on narrow views */
+    }
+
+    .ei-hero-eyebrow-text {
+        font-size: 12px;
+    }
+
+    .ei-hero-h1 .l1 {
+        font-size: 32px; /* Lock baseline small text size to prevent line truncation overlaps */
+    }
+
+    .ei-hero-h1 .l1::after {
+        margin: 16px auto;
+    }
+
+    /* Transform button arrays to robust thumb tap targets */
+    .ei-hero-btns {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .ei-hero-btns a {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 14px 20px;
+    }
+}

@@ -1,0 +1,161 @@
+/* ==================== NEW FOOTER / CTA SECTION ==================== */
+.ei-footer {
+    padding: 90px 0 60px 0;
+    background-color: #3a2f70;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Radiant orange glow accent background */
+.ei-footer::before {
+    content: '';
+    position: absolute;
+    top: -250px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(235, 127, 59, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.ei-footer-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Section Header & Labels */
+.ei-footer .ei-section-label {
+    display: block;
+    color: #eb7f3b;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.ei-footer h2 {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 20px;
+    line-height: 1.25;
+}
+
+.ei-footer h2 span {
+    color: #eb7f3b;
+}
+
+.ei-footer p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.70);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+/* Action Buttons Grid */
+.ei-cta-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+/* 
+ * FIX: Swapped messy flex-wrap for an explicit CSS Grid.
+ * Forces 4 clean columns on desktop monitors.
+ */
+.ei-cta-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+}
+
+.ei-cta-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ei-cta-info-item span {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 8px;
+}
+
+.ei-cta-info-item a,
+.ei-cta-info-item p {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.ei-cta-info-item a:hover {
+    color: #eb7f3b;
+}
+
+/* ==================== RESPONSIVE BREAKPOINTS ==================== */
+
+/* Tablets & Medium Screens (e.g., iPads) */
+@media (max-width: 992px) {
+    .ei-footer {
+        padding: 70px 0 50px 0;
+    }
+    
+    /* Drops into a balanced, symmetric 2x2 grid layout */
+    .ei-cta-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
+}
+
+/* Small Mobile Devices (Smartphones) */
+@media (max-width: 576px) {
+    .ei-footer {
+        padding: 60px 0 40px 0;
+    }
+    
+    /* Prevents messy line-breaks inside titles on narrow viewports */
+    .ei-footer h2 br {
+        display: none;
+    }
+
+    /* Stack buttons full-width for easy thumb tapping */
+    .ei-cta-btns {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    
+    .ei-cta-btns a {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    /* Clean vertical stack for contact rows */
+    .ei-cta-info {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-top: 40px;
+    }
+}
