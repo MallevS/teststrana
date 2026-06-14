@@ -3201,6 +3201,7 @@ h6,
     .ip-gallery.g3,
     .ip-gallery.g4 {
         grid-template-columns: 1fr;
+        gap: 12px;
     }
 
     .ip-gallery.g3 .ip-gi:first-child {
