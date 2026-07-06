@@ -3279,3 +3279,416 @@ h6,
         /* Spans full width gracefully on mobile devices */
     }
 }
+
+/* ======================================================================
+   Residential buildings page — stambeni-zgradi.html
+   ====================================================================== */
+.rz-overview {
+    padding: 96px 0 54px;
+    background:
+        radial-gradient(circle at 10% 0%, rgba(235, 127, 59, .08), transparent 34%),
+        linear-gradient(180deg, #fff 0%, #f7f4ef 100%);
+}
+
+.rz-overview-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(340px, .9fr);
+    gap: 36px;
+    align-items: stretch;
+}
+
+.rz-overview-copy {
+    background: #fff;
+    border: 1px solid rgba(58, 47, 112, .08);
+    border-radius: 28px;
+    padding: 44px;
+    box-shadow: 0 24px 70px rgba(58, 47, 112, .07);
+}
+
+.rz-overview-copy h2 {
+    font-size: clamp(30px, 4vw, 56px);
+    line-height: .98;
+    letter-spacing: -0.045em;
+    color: #3a2f70;
+    margin: 12px 0 22px;
+    max-width: 820px;
+}
+
+.rz-overview-copy p {
+    max-width: 760px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(58, 47, 112, .60);
+    margin: 0 0 14px;
+}
+
+.rz-overview-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.rz-overview-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.rz-stat-card {
+    min-height: 158px;
+    border-radius: 24px;
+    padding: 26px;
+    background: #3a2f70;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 24px 60px rgba(58, 47, 112, .14);
+}
+
+.rz-stat-card:nth-child(2),
+.rz-stat-card:nth-child(3) {
+    background: #eb7f3b;
+}
+
+.rz-stat-card::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    top: -34px;
+    right: -28px;
+    border: 24px solid rgba(255, 255, 255, .08);
+}
+
+.rz-stat-card strong {
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: .9;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.rz-stat-card span {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    opacity: .75;
+    position: relative;
+    z-index: 1;
+}
+
+.rz-buildings,
+.rz-catalogs,
+.rz-gallery-section {
+    padding: 86px 0;
+    background: #fff;
+}
+
+.rz-catalogs {
+    background: #f7f4ef;
+}
+
+.rz-building-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.rz-building-card {
+    background: #fff;
+    border: 1px solid rgba(58, 47, 112, .09);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(58, 47, 112, .07);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.rz-building-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 90px rgba(58, 47, 112, .12);
+    border-color: rgba(235, 127, 59, .32);
+}
+
+.rz-card-media {
+    padding: 12px;
+    background: linear-gradient(135deg, rgba(58, 47, 112, .06), rgba(235, 127, 59, .08));
+}
+
+.rz-card-gallery {
+    border-radius: 20px;
+}
+
+.rz-card-gallery .ip-gi {
+    aspect-ratio: 16/10;
+    min-height: 330px;
+}
+
+.rz-card-gallery .ip-gi:not(:first-child) {
+    display: none;
+}
+
+.rz-card-gallery .ip-gi img {
+    object-fit: cover;
+}
+
+.rz-card-body {
+    padding: 28px 28px 30px;
+}
+
+.rz-card-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #eb7f3b;
+    margin-bottom: 10px;
+}
+
+.rz-card-kicker::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.rz-card-body h3 {
+    font-size: clamp(22px, 2.4vw, 34px);
+    line-height: 1.05;
+    color: #3a2f70;
+    letter-spacing: -0.035em;
+    margin: 0 0 14px;
+}
+
+.rz-card-body p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: rgba(58, 47, 112, .58);
+    margin: 0 0 20px;
+}
+
+.rz-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.rz-meta-row span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(58, 47, 112, .06);
+    color: rgba(58, 47, 112, .72);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.rz-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.rz-link-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 18px;
+    border-radius: 999px;
+    background: #3a2f70;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.rz-link-btn:hover {
+    background: #eb7f3b;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.rz-link-btn.muted {
+    background: rgba(58, 47, 112, .07);
+    color: #3a2f70;
+}
+
+.rz-link-btn.muted:hover {
+    background: rgba(235, 127, 59, .16);
+    color: #3a2f70;
+}
+
+.rz-catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.rz-catalog-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    text-decoration: none;
+    border: 1px solid rgba(58, 47, 112, .08);
+    box-shadow: 0 20px 50px rgba(58, 47, 112, .07);
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.rz-catalog-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(235, 127, 59, .35);
+    box-shadow: 0 28px 75px rgba(58, 47, 112, .12);
+}
+
+.rz-catalog-card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    background: #ece8e1;
+}
+
+.rz-catalog-card div {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.rz-catalog-card span {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #eb7f3b;
+}
+
+.rz-catalog-card strong {
+    font-size: 16px;
+    line-height: 1.2;
+    color: #3a2f70;
+}
+
+.rz-catalog-card em {
+    font-style: normal;
+    font-size: 12px;
+    color: rgba(58, 47, 112, .52);
+    font-weight: 700;
+}
+
+.rz-main-gallery {
+    gap: 10px;
+}
+
+.rz-main-gallery.ip-gallery.g4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.rz-main-gallery .ip-gi:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.rz-main-gallery .ip-gi {
+    aspect-ratio: 4/3;
+    border-radius: 20px;
+}
+
+.rz-main-gallery .ip-gi:first-child {
+    aspect-ratio: auto;
+    min-height: 430px;
+}
+
+@media (max-width: 1100px) {
+    .rz-overview-grid,
+    .rz-building-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rz-catalog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .rz-overview,
+    .rz-buildings,
+    .rz-catalogs,
+    .rz-gallery-section {
+        padding: 56px 0;
+    }
+
+    .rz-overview-copy {
+        padding: 28px 22px;
+        border-radius: 22px;
+    }
+
+    .rz-overview-panel {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rz-stat-card {
+        min-height: 128px;
+        padding: 20px;
+    }
+
+    .rz-card-gallery .ip-gi {
+        min-height: 260px;
+    }
+
+    .rz-card-body {
+        padding: 24px 20px;
+    }
+
+    .rz-main-gallery.ip-gallery.g4 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rz-main-gallery .ip-gi:first-child {
+        grid-column: span 2;
+        min-height: 290px;
+    }
+}
+
+@media (max-width: 560px) {
+    .rz-overview-panel,
+    .rz-catalog-grid,
+    .rz-main-gallery.ip-gallery.g4 {
+        grid-template-columns: 1fr;
+    }
+
+    .rz-main-gallery .ip-gi:first-child {
+        grid-column: span 1;
+        min-height: unset;
+        aspect-ratio: 4/3;
+    }
+
+    .rz-overview-actions,
+    .rz-card-actions {
+        flex-direction: column;
+    }
+
+    .rz-link-btn,
+    .rz-overview-actions .ei-btn-primary,
+    .rz-overview-actions .ei-btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+}
