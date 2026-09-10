@@ -4,10 +4,25 @@ declare(strict_types=1);
 header('X-Content-Type-Options: nosniff');
 header('Referrer-Policy: strict-origin-when-cross-origin');
 
+$language = (($_POST['lang'] ?? '') === 'en') ? 'en' : 'mk';
+
 $isJson = str_contains($_SERVER['HTTP_ACCEPT'] ?? '', 'application/json');
 
 function respond(int $status, bool $ok, string $message, bool $json): never
 {
+    global $language;
+    $translations = [
+        'Дозволено е само испраќање преку контакт формата.' => 'Please submit your message using the contact form.',
+        'Пораката е преголема.' => 'Your message is too large.',
+        'Почекајте кратко пред повторно испраќање.' => 'Please wait a moment before sending another message.',
+        'Ви благодариме. Пораката е примена.' => 'Thank you. Your message has been received.',
+        'Внесете валидно име, e-mail адреса и порака.' => 'Please enter a valid name, email address and message.',
+        'Внесените податоци не се валидни.' => 'The submitted information is invalid.',
+        'Пораката треба да содржи најмалку 10 знаци.' => 'Your message must contain at least 10 characters.',
+        'Пораката не можеше да се испрати. Контактирајте нè на +389 (034) 211-944.' => 'Your message could not be sent. Please call +389 (034) 211-944.',
+        'Ви благодариме. Пораката е успешно испратена.' => 'Thank you. Your message was sent successfully.',
+    ];
+    if ($language === 'en') $message = $translations[$message] ?? $message;
     http_response_code($status);
     if ($json) {
         header('Content-Type: application/json; charset=UTF-8');
@@ -15,9 +30,9 @@ function respond(int $status, bool $ok, string $message, bool $json): never
     } else {
         header('Content-Type: text/html; charset=UTF-8');
         $safe = htmlspecialchars($message, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-        echo '<!doctype html><html lang="mk"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">';
-        echo '<title>ЕУРОИНГ — Контакт</title><style>body{font-family:system-ui,sans-serif;background:#f4f0eb;color:#171127;display:grid;place-items:center;min-height:100vh;margin:0;padding:24px}.card{max-width:620px;background:#fff;padding:40px;border-radius:20px;box-shadow:0 24px 70px rgba(58,47,112,.12)}a{color:#3a2f70;font-weight:700}</style>';
-        echo '<main class="card"><h1>' . ($ok ? 'Пораката е испратена' : 'Пораката не е испратена') . '</h1><p>' . $safe . '</p><p><a href="contacts.html">Назад кон контакт</a></p></main></html>';
+        echo '<!doctype html><html lang="' . $language . '"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">';
+        echo '<title>EUROING — Contact</title><style>body{font-family:system-ui,sans-serif;background:#f4f0eb;color:#171127;display:grid;place-items:center;min-height:100vh;margin:0;padding:24px}.card{max-width:620px;background:#fff;padding:40px;border-radius:20px;box-shadow:0 24px 70px rgba(58,47,112,.12)}a{color:#3a2f70;font-weight:700}</style>';
+        echo '<main class="card"><h1>' . ($language === 'en' ? ($ok ? 'Message sent' : 'Message not sent') : ($ok ? 'Пораката е испратена' : 'Пораката не е испратена')) . '</h1><p>' . $safe . '</p><p><a href="' . ($language === 'en' ? 'en/' : '') . 'contacts.html">' . ($language === 'en' ? 'Back to contact' : 'Назад кон контакт') . '</a></p></main></html>';
     }
     exit;
 }
@@ -80,7 +95,7 @@ $body .= "E-mail: {$email}\n\n";
 $body .= "Порака:\n{$message}\n";
 $body .= "\nIP: " . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . "\n";
 
-$host = preg_replace('/[^a-z0-9.-]/i', '', (string)($_SERVER['HTTP_HOST'] ?? 'euroing.com.mk')) ?: 'euroing.com.mk';
+$host = 'euroing.com.mk';
 $headers = [
     'MIME-Version: 1.0',
     'Content-Type: text/plain; charset=UTF-8',

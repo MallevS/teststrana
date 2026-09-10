@@ -1,6 +1,8 @@
 (function () {
     'use strict';
 
+    const en = document.documentElement.lang === 'en';
+    const text = (mk, english) => en ? english : mk;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const desktopQuery = window.matchMedia('(min-width: 1101px)');
 
@@ -45,7 +47,7 @@
         return Array.from(container.querySelectorAll(
             'a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
         )).filter(function (element) {
-            return !element.hidden && element.getAttribute('aria-hidden') !== 'true';
+            return !element.hidden && !element.closest('[inert]') && element.getClientRects().length > 0 && element.getAttribute('aria-hidden') !== 'true';
         });
     }
 
@@ -63,13 +65,13 @@
             overlay.classList.toggle('is-open', open);
             openButton.classList.toggle('cmenu', open);
             openButton.setAttribute('aria-expanded', String(open));
-            openButton.setAttribute('aria-label', open ? 'Затвори мени' : 'Отвори мени');
+            openButton.setAttribute('aria-label', open ? text('Затвори мени', 'Close menu') : text('Отвори мени', 'Open menu'));
             panel.setAttribute('aria-hidden', String(!open));
 
             // Important: do not modify body/html overflow, padding, margins,
             // width or scroll position. The original menu never shifted the page.
-            if (open) panel.removeAttribute('inert');
-            else panel.setAttribute('inert', '');
+            if (open) { panel.removeAttribute('inert'); (closeButton || getFocusable(panel)[0])?.focus(); }
+            else { if (panel.contains(document.activeElement)) openButton.focus(); panel.setAttribute('inert', ''); }
         }
 
         openButton.addEventListener('click', function () {
@@ -87,6 +89,11 @@
         });
 
         document.addEventListener('keydown', function (event) {
+            if (event.key === 'Tab' && panel.getAttribute('aria-hidden') === 'false') {
+                const items = getFocusable(panel); const first = items[0], last = items[items.length - 1];
+                if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+                else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+            }
             if (event.key === 'Escape' && panel.getAttribute('aria-hidden') === 'false') {
                 setOpen(false);
             }
@@ -110,11 +117,14 @@
                 item.classList.toggle('is-open', expanded);
             }
 
+            let closeTimer = 0;
             toggle.addEventListener('click', function () {
                 setExpanded(toggle.getAttribute('aria-expanded') !== 'true');
             });
-            item.addEventListener('mouseenter', function () { if (desktopQuery.matches) setExpanded(true); });
-            item.addEventListener('mouseleave', function () { if (desktopQuery.matches) setExpanded(false); });
+            item.addEventListener('mouseenter', function () { window.clearTimeout(closeTimer); if (desktopQuery.matches) setExpanded(true); });
+            item.addEventListener('mouseleave', function () {
+                if (desktopQuery.matches) closeTimer = window.setTimeout(function () { if (!item.matches(':hover') && !item.contains(document.activeElement)) setExpanded(false); }, 180);
+            });
             item.addEventListener('focusout', function (event) {
                 if (!item.contains(event.relatedTarget)) setExpanded(false);
             });
@@ -214,7 +224,6 @@
             let timer = 0;
             let progressTimer = 0;
             let paused = false;
-
             function pad(number) { return String(number).padStart(2, '0'); }
 
             function clearTimers() {
@@ -277,12 +286,6 @@
                 });
             });
 
-            hero.addEventListener('mouseenter', function () { setPaused(true); });
-            hero.addEventListener('mouseleave', function () { setPaused(false); });
-            hero.addEventListener('focusin', function () { setPaused(true); });
-            hero.addEventListener('focusout', function (event) {
-                if (!hero.contains(event.relatedTarget)) setPaused(false);
-            });
             document.addEventListener('visibilitychange', function () { setPaused(document.hidden); });
             reducedMotion.addEventListener('change', function () { activate(current, false); });
             activate(current, false);
@@ -360,7 +363,7 @@
             if (!form.reportValidity()) return;
             if (status) {
                 status.className = 'ei-form-status is-pending';
-                status.textContent = 'Пораката се испраќа…';
+                status.textContent = text('Пораката се испраќа…', 'Sending your message…');
             }
             if (submit) submit.disabled = true;
 
@@ -371,16 +374,16 @@
                     headers: { 'Accept': 'application/json' }
                 });
                 const payload = await response.json().catch(function () { return {}; });
-                if (!response.ok || payload.ok === false) throw new Error(payload.message || 'Пораката не беше испратена.');
+                if (!response.ok || payload.ok !== true) throw new Error(payload.message || text('Пораката не беше испратена.', 'Your message could not be sent.'));
                 form.reset();
                 if (status) {
                     status.className = 'ei-form-status is-success';
-                    status.textContent = payload.message || 'Ви благодариме. Пораката е успешно испратена.';
+                    status.textContent = payload.message || text('Ви благодариме. Пораката е успешно испратена.', 'Thank you. Your message was sent successfully.');
                 }
             } catch (error) {
                 if (status) {
                     status.className = 'ei-form-status is-error';
-                    status.textContent = error.message || 'Настана грешка. Обидете се повторно или контактирајте нè по телефон.';
+                    status.textContent = (error instanceof TypeError ? text('Нема врска со серверот. Обидете се повторно или јавете ни се.', 'Unable to connect. Please try again or call us.') : error.message) || text('Настана грешка. Обидете се повторно или контактирајте нè по телефон.', 'Something went wrong. Please try again or call us.');
                 }
             } finally {
                 if (submit) submit.disabled = false;
@@ -388,7 +391,49 @@
         });
     }
 
+    function initLanguageMenu() {
+        document.querySelectorAll('.ei-language-menu').forEach(function (menu) {
+            document.addEventListener('click', function (event) {
+                if (!menu.contains(event.target)) menu.open = false;
+            });
+            menu.addEventListener('focusout', function (event) {
+                if (!menu.contains(event.relatedTarget)) menu.open = false;
+            });
+            menu.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && menu.open) {
+                    event.preventDefault(); menu.open = false; menu.querySelector('summary').focus();
+                }
+            });
+        });
+    }
+
+    function initScrollTop() {
+        const button = document.querySelector('.ei-scroll-top');
+        if (!button) return;
+        let scroller = window;
+        let scheduled = false;
+        function update(event) {
+            if (event && event.target !== document && event.target instanceof Element && event.target.scrollHeight > event.target.clientHeight && getComputedStyle(event.target).overflowY.match(/auto|scroll/)) scroller = event.target;
+            if (scheduled) return;
+            scheduled = true;
+            requestAnimationFrame(function () {
+                scheduled = false;
+                button.hidden = (scroller === window ? window.scrollY : scroller.scrollTop) < 200;
+            });
+        }
+        document.addEventListener('scroll', update, {capture: true, passive: true});
+        window.addEventListener('scroll', update, {passive: true});
+        button.addEventListener('click', function () {
+            scroller.scrollTo({top: 0, behavior: reducedMotion.matches ? 'auto' : 'smooth'});
+            const target = document.querySelector('.header-logo') || document.querySelector('h1');
+            if (target) { if (!target.matches('a,button')) target.tabIndex = -1; target.focus({preventScroll:true}); }
+        });
+        update();
+    }
+
     ready(function () {
+        initScrollTop();
+        initLanguageMenu();
         initBackgrounds();
         hideLoader();
         initMobileMenu();
@@ -396,7 +441,7 @@
         initSmoothAnchors();
         initHeaderState();
         initHeroSlideshows();
-        initStats();
+
         initLazyMaps();
         initContactForm();
     });
