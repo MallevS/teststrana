@@ -396,9 +396,6 @@
             document.addEventListener('click', function (event) {
                 if (!menu.contains(event.target)) menu.open = false;
             });
-            menu.addEventListener('focusout', function (event) {
-                if (!menu.contains(event.relatedTarget)) menu.open = false;
-            });
             menu.addEventListener('keydown', function (event) {
                 if (event.key === 'Escape' && menu.open) {
                     event.preventDefault(); menu.open = false; menu.querySelector('summary').focus();

@@ -1,7 +1,6 @@
 /* ==================== HERO SECTION BASE ==================== */
 .ei-hero {
     position: relative;
-    height: 100vh;
     height: 100dvh; /* Fixes mobile viewport jumping caused by address bars */
     min-height: 600px;
     overflow: hidden;
