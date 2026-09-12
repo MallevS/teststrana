@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>EUROING | Construction company in Gevgelija</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport">
     <meta
         content="EUROING is a construction company based in Gevgelija, with experience since 1991 in infrastructure, hydraulic engineering, energy projects and residential buildings."
         name="description">
@@ -108,7 +108,7 @@
     "@id": "https://www.euroing.com.mk/#business"
   }
 }</script>
-    <link href="../css/site.css?v=2.1.0" rel="stylesheet">
+    <link href="../css/site.css?v=2.2.2" rel="stylesheet">
     <link rel="alternate" hreflang="mk" href="https://www.euroing.com.mk/">
     <link rel="alternate" hreflang="en" href="https://www.euroing.com.mk/en/">
     <link rel="alternate" hreflang="x-default" href="https://www.euroing.com.mk/"><noscript>
@@ -139,12 +139,23 @@
             <nav aria-label="Main navigation" class="ei-desktop-nav">
                 <ul>
                     <li><a aria-current="page" class="act-link" href="index.html">Home</a></li>
-                    <li><a href="about.html">About us</a></li>
+                    <li class="ei-nav-has-dropdown"><button type="button" class="ei-nav-dropdown-toggle"
+                            aria-expanded="false" aria-controls="desktop-about-menu">About us<svg aria-hidden="true"
+                                class="ei-menu-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg></button>
+                        <div class="ei-nav-dropdown ei-nav-about-dropdown" id="desktop-about-menu"><a
+                                href="about.html">History</a><a href="quality.html">Quality</a></div>
+                    </li>
                     <li><a href="services.html">Services</a></li>
-                    <li class="ei-nav-projects">
-                        <button aria-controls="desktop-projects-menu" aria-expanded="false" aria-haspopup="true"
-                            class="ei-nav-project-toggle" type="button"> Projects <i aria-hidden="true"
-                                class="fal fa-angle-down"></i>
+                    <li class="ei-nav-has-dropdown">
+                        <button aria-controls="desktop-projects-menu" aria-expanded="false"
+                            class="ei-nav-dropdown-toggle" type="button"> Projects <svg aria-hidden="true"
+                                class="ei-menu-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
                         </button>
                         <div class="ei-nav-dropdown" id="desktop-projects-menu">
                             <a href="infrastrukturni-objekti.html">Infrastructure</a>
@@ -196,21 +207,31 @@
                             <ul>
                                 <li><a aria-current="page" class="act-link" href="index.html"><span aria-hidden="true"
                                             class="ei-mn-num">01</span>Home</a></li>
-                                <li><a href="about.html"><span aria-hidden="true" class="ei-mn-num">02</span>About
-                                        us</a>
+                                <li class="ei-mn-has-sub"><button type="button" class="ei-mn-sub-toggle"
+                                        aria-expanded="false" aria-controls="mobile-about-submenu"><span
+                                            aria-hidden="true" class="ei-mn-num">02</span>About us<svg
+                                            aria-hidden="true" class="ei-mn-chevron" width="12" height="12"
+                                            viewBox="0 0 12 12" fill="none">
+                                            <path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg></button>
+                                    <ul class="ei-mn-sub" id="mobile-about-submenu" aria-hidden="true" inert>
+                                        <li><a href="about.html">History</a></li>
+                                        <li><a href="quality.html">Quality</a></li>
+                                    </ul>
                                 </li>
                                 <li><a href="services.html"><span aria-hidden="true"
                                             class="ei-mn-num">03</span>Services</a></li>
                                 <li class="ei-mn-has-sub">
-                                    <a href="infrastrukturni-objekti.html" class="ei-mn-sub-toggle"
-                                        aria-expanded="false" aria-controls="mobile-projects-submenu">
+                                    <button class="ei-mn-sub-toggle" aria-expanded="false"
+                                        aria-controls="mobile-projects-submenu" type="button">
                                         <span aria-hidden="true" class="ei-mn-num">04</span>Projects <svg
                                             aria-hidden="true" class="ei-mn-chevron" fill="none"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
                                             <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-linecap="round"
                                                 stroke-linejoin="round" stroke-width="1.5"></path>
                                         </svg>
-                                    </a>
+                                    </button>
                                     <ul aria-hidden="true" class="ei-mn-sub" id="mobile-projects-submenu" inert="">
                                         <li><a href="infrastrukturni-objekti.html">Infrastructure</a></li>
                                         <li><a href="hidrogradba.html">Hydraulic engineering</a></li>
@@ -267,8 +288,18 @@
                         <div aria-hidden="true" class="ei-hero-slides">
                             <div class="ei-hero-slide active" style="background-image:url('../images/bg/8.jpg')"></div>
                             <div class="ei-hero-slide" style="background-image:url('../images/bg/14.webp')"></div>
-                            <div class="ei-hero-slide" style="background-image:url('../images/bg/2.webp')"></div>
-                            <div class="ei-hero-slide" style="background-image:url('../images/bg/veternici.jpg')"></div>
+                            <div class="ei-hero-slide"
+                                style="background-image:url('../project_images/Pristapni%20patista%20za%20Veternici%202024/20240827_103909.webp')">
+                            </div>
+                            <div class="ei-hero-slide"
+                                style="background-image:url('../project_images/Recni%20Korita/regulacija%20na%20suva%20reka%20.webp')">
+                            </div>
+                            <div class="ei-hero-slide"
+                                style="background-image:url('../project_images/Avtopat%20Smokvica%20Gevgelija/IMG_2028.webp')">
+                            </div>
+                            <div class="ei-hero-slide"
+                                style="background-image:url('../project_images/Avtopat%20Smokvica%20Gevgelija/IMG_1748.webp')">
+                            </div>
                         </div>
                         <!-- Overlays -->
                         <div aria-hidden="true" class="ei-hero-overlay"></div>
@@ -572,7 +603,7 @@
     </div>
     <!-- Main end -->
     <!--=============== scripts  ===============-->
-    <script defer src="../js/site.js?v=2.1.0"></script>
+    <script defer src="../js/site.js?v=2.2.1"></script>
     <button class="ei-scroll-top" type="button" aria-label="Back to top" hidden><svg aria-hidden="true" width="24"
             height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="m5 12 7-7 7 7M12 5v14"></path>

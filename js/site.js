@@ -107,36 +107,64 @@
     }
 
     function initNavigationDropdowns() {
-        document.querySelectorAll('.ei-nav-projects').forEach(function (item) {
-            const toggle = item.querySelector('.ei-nav-project-toggle');
+        document.querySelectorAll('.ei-nav-has-dropdown').forEach(function (item) {
+            const toggle = item.querySelector('.ei-nav-dropdown-toggle');
             const dropdown = item.querySelector('.ei-nav-dropdown');
             if (!toggle || !dropdown) return;
 
             function setExpanded(expanded) {
+                if (expanded) {
+                    document.querySelectorAll('.ei-nav-has-dropdown.is-open').forEach(function (other) {
+                        if (other === item) return;
+                        other.classList.remove('is-open');
+                        other.querySelector('.ei-nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
+                        other.querySelector('.ei-nav-dropdown').setAttribute('inert', '');
+                    });
+                }
                 toggle.setAttribute('aria-expanded', String(expanded));
                 item.classList.toggle('is-open', expanded);
+                if (expanded) dropdown.removeAttribute('inert');
+                else dropdown.setAttribute('inert', '');
             }
 
             let closeTimer = 0;
             toggle.addEventListener('click', function () {
                 setExpanded(toggle.getAttribute('aria-expanded') !== 'true');
             });
-            item.addEventListener('mouseenter', function () { window.clearTimeout(closeTimer); if (desktopQuery.matches) setExpanded(true); });
-            item.addEventListener('mouseleave', function () {
-                if (desktopQuery.matches) closeTimer = window.setTimeout(function () { if (!item.matches(':hover') && !item.contains(document.activeElement)) setExpanded(false); }, 180);
+            // Touch must use the button's click; synthesized mouse events can
+            // otherwise open and immediately close the same disclosure.
+            item.addEventListener('pointerenter', function (event) {
+                window.clearTimeout(closeTimer);
+                if (event.pointerType === 'mouse' && desktopQuery.matches) setExpanded(true);
+            });
+            item.addEventListener('pointerleave', function (event) {
+                if (event.pointerType === 'mouse' && desktopQuery.matches) closeTimer = window.setTimeout(function () {
+                    if (!item.matches(':hover') && !item.contains(document.activeElement)) setExpanded(false);
+                }, 180);
             });
             item.addEventListener('focusout', function (event) {
-                if (!item.contains(event.relatedTarget)) setExpanded(false);
+                if (event.relatedTarget && !item.contains(event.relatedTarget) && !item.matches(':hover')) setExpanded(false);
+            });
+            toggle.addEventListener('keydown', function (event) {
+                if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
+                event.preventDefault();
+                setExpanded(true);
+                const links = getFocusable(dropdown);
+                const target = event.key === 'ArrowUp' ? links[links.length - 1] : links[0];
+                if (target) target.focus();
             });
             document.addEventListener('click', function (event) {
                 if (!item.contains(event.target)) setExpanded(false);
             });
             document.addEventListener('keydown', function (event) {
                 if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+                    event.preventDefault();
                     setExpanded(false);
                     toggle.focus();
                 }
             });
+            desktopQuery.addEventListener('change', function () { setExpanded(false); });
+            setExpanded(false);
         });
 
         document.querySelectorAll('.ei-mn-has-sub').forEach(function (item) {

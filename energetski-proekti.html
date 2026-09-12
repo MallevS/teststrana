@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Енергетски проекти · ЕУРОИНГ Гевгелија</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport">
     <meta
         content="Преглед на енергетски проекти на ЕУРОИНГ — изградба на паркови на ветерници и современи фотоволтаични централи во Македонија."
         name="description">
@@ -85,7 +85,7 @@
     }
   ]
 }</script>
-    <link href="css/site.css?v=2.1.0" rel="stylesheet">
+    <link href="css/site.css?v=2.2.2" rel="stylesheet">
     <link rel="alternate" hreflang="mk" href="https://www.euroing.com.mk/energetski-proekti.html">
     <link rel="alternate" hreflang="en" href="https://www.euroing.com.mk/en/energetski-proekti.html">
     <link rel="alternate" hreflang="x-default" href="https://www.euroing.com.mk/energetski-proekti.html"><noscript>
@@ -114,12 +114,24 @@
             <nav aria-label="Главна навигација" class="ei-desktop-nav">
                 <ul role="list">
                     <li><a href="index.html">Почетна</a></li>
-                    <li><a href="about.html">За нас</a></li>
+                    <li class="ei-nav-has-dropdown"><button type="button" class="ei-nav-dropdown-toggle"
+                            aria-expanded="false" aria-controls="desktop-about-menu">За нас<svg aria-hidden="true"
+                                class="ei-menu-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg></button>
+                        <div class="ei-nav-dropdown ei-nav-about-dropdown" id="desktop-about-menu"><a
+                                href="about.html">Историјат</a><a href="quality.html">Квалитет</a></div>
+                    </li>
                     <li><a href="services.html">Услуги</a></li>
-                    <li class="ei-nav-projects">
-                        <button aria-controls="desktop-projects-menu" aria-expanded="false" aria-haspopup="true"
-                            class="act-link ei-nav-project-toggle" type="button">
-                            Проекти <i aria-hidden="true" class="fal fa-angle-down"></i>
+                    <li class="ei-nav-has-dropdown">
+                        <button aria-controls="desktop-projects-menu" aria-expanded="false"
+                            class="act-link ei-nav-dropdown-toggle" type="button">
+                            Проекти <svg aria-hidden="true" class="ei-menu-chevron" width="12" height="12"
+                                viewBox="0 0 12 12" fill="none">
+                                <path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
                         </button>
                         <div class="ei-nav-dropdown" id="desktop-projects-menu">
                             <a href="infrastrukturni-objekti.html">Инфраструктурни објекти</a>
@@ -170,20 +182,31 @@
                             <ul>
                                 <li><a href="index.html"><span aria-hidden="true" class="ei-mn-num">01</span>Почетна</a>
                                 </li>
-                                <li><a href="about.html"><span aria-hidden="true" class="ei-mn-num">02</span>За нас</a>
+                                <li class="ei-mn-has-sub"><button type="button" class="ei-mn-sub-toggle"
+                                        aria-expanded="false" aria-controls="mobile-about-submenu"><span
+                                            aria-hidden="true" class="ei-mn-num">02</span>За нас<svg aria-hidden="true"
+                                            class="ei-mn-chevron" width="12" height="12" viewBox="0 0 12 12"
+                                            fill="none">
+                                            <path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg></button>
+                                    <ul class="ei-mn-sub" id="mobile-about-submenu" aria-hidden="true" inert>
+                                        <li><a href="about.html">Историјат</a></li>
+                                        <li><a href="quality.html">Квалитет</a></li>
+                                    </ul>
                                 </li>
                                 <li><a href="services.html"><span aria-hidden="true"
                                             class="ei-mn-num">03</span>Услуги</a></li>
                                 <li class="ei-mn-has-sub">
-                                    <a href="infrastrukturni-objekti.html" class="ei-mn-sub-toggle act-link"
-                                        aria-expanded="false" aria-controls="mobile-projects-submenu">
+                                    <button class="ei-mn-sub-toggle act-link" aria-expanded="false"
+                                        aria-controls="mobile-projects-submenu" type="button">
                                         <span aria-hidden="true" class="ei-mn-num">04</span>Проекти
                                         <svg aria-hidden="true" class="ei-mn-chevron" fill="none"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
                                             <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-linecap="round"
                                                 stroke-linejoin="round" stroke-width="1.5"></path>
                                         </svg>
-                                    </a>
+                                    </button>
                                     <ul aria-hidden="true" class="ei-mn-sub" id="mobile-projects-submenu" inert="">
                                         <li><a href="infrastrukturni-objekti.html">Инфраструктурни објекти</a></li>
                                         <li><a href="hidrogradba.html">Хидроградба</a></li>
@@ -676,7 +699,7 @@
             sectionObserver.observe(section);
         });
     </script>
-    <script defer src="js/site.js?v=2.1.0"></script>
+    <script defer src="js/site.js?v=2.2.1"></script>
     <button class="ei-scroll-top" type="button" aria-label="Назад на почеток" hidden><svg aria-hidden="true" width="24"
             height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="m5 12 7-7 7 7M12 5v14"></path>

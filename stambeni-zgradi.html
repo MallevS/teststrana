@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Станбени згради · ЕУРОИНГ Гевгелија</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport">
     <meta
         content="Преглед на станбени проекти на ЕУРОИНГ Гевгелија — изградба на модерни, сигурни и енергетски ефикасни станбени згради и комплекси."
         name="description">
@@ -85,7 +85,7 @@
     }
   ]
 }</script>
-    <link href="css/site.css?v=2.1.0" rel="stylesheet">
+    <link href="css/site.css?v=2.2.2" rel="stylesheet">
     <link rel="alternate" hreflang="mk" href="https://www.euroing.com.mk/stambeni-zgradi.html">
     <link rel="alternate" hreflang="en" href="https://www.euroing.com.mk/en/stambeni-zgradi.html">
     <link rel="alternate" hreflang="x-default" href="https://www.euroing.com.mk/stambeni-zgradi.html"><noscript>
@@ -114,12 +114,24 @@
             <nav aria-label="Главна навигација" class="ei-desktop-nav">
                 <ul role="list">
                     <li><a href="index.html">Почетна</a></li>
-                    <li><a href="about.html">За нас</a></li>
+                    <li class="ei-nav-has-dropdown"><button type="button" class="ei-nav-dropdown-toggle"
+                            aria-expanded="false" aria-controls="desktop-about-menu">За нас<svg aria-hidden="true"
+                                class="ei-menu-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg></button>
+                        <div class="ei-nav-dropdown ei-nav-about-dropdown" id="desktop-about-menu"><a
+                                href="about.html">Историјат</a><a href="quality.html">Квалитет</a></div>
+                    </li>
                     <li><a href="services.html">Услуги</a></li>
-                    <li class="ei-nav-projects">
-                        <button aria-controls="desktop-projects-menu" aria-expanded="false" aria-haspopup="true"
-                            class="act-link ei-nav-project-toggle" type="button">
-                            Проекти <i aria-hidden="true" class="fal fa-angle-down"></i>
+                    <li class="ei-nav-has-dropdown">
+                        <button aria-controls="desktop-projects-menu" aria-expanded="false"
+                            class="act-link ei-nav-dropdown-toggle" type="button">
+                            Проекти <svg aria-hidden="true" class="ei-menu-chevron" width="12" height="12"
+                                viewBox="0 0 12 12" fill="none">
+                                <path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
                         </button>
                         <div class="ei-nav-dropdown" id="desktop-projects-menu">
                             <a href="infrastrukturni-objekti.html">Инфраструктурни објекти</a>
@@ -170,20 +182,31 @@
                             <ul>
                                 <li><a href="index.html"><span aria-hidden="true" class="ei-mn-num">01</span>Почетна</a>
                                 </li>
-                                <li><a href="about.html"><span aria-hidden="true" class="ei-mn-num">02</span>За нас</a>
+                                <li class="ei-mn-has-sub"><button type="button" class="ei-mn-sub-toggle"
+                                        aria-expanded="false" aria-controls="mobile-about-submenu"><span
+                                            aria-hidden="true" class="ei-mn-num">02</span>За нас<svg aria-hidden="true"
+                                            class="ei-mn-chevron" width="12" height="12" viewBox="0 0 12 12"
+                                            fill="none">
+                                            <path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg></button>
+                                    <ul class="ei-mn-sub" id="mobile-about-submenu" aria-hidden="true" inert>
+                                        <li><a href="about.html">Историјат</a></li>
+                                        <li><a href="quality.html">Квалитет</a></li>
+                                    </ul>
                                 </li>
                                 <li><a href="services.html"><span aria-hidden="true"
                                             class="ei-mn-num">03</span>Услуги</a></li>
                                 <li class="ei-mn-has-sub">
-                                    <a href="infrastrukturni-objekti.html" class="ei-mn-sub-toggle act-link"
-                                        aria-expanded="false" aria-controls="mobile-projects-submenu">
+                                    <button class="ei-mn-sub-toggle act-link" aria-expanded="false"
+                                        aria-controls="mobile-projects-submenu" type="button">
                                         <span aria-hidden="true" class="ei-mn-num">04</span>Проекти
                                         <svg aria-hidden="true" class="ei-mn-chevron" fill="none"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
                                             <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-linecap="round"
                                                 stroke-linejoin="round" stroke-width="1.5"></path>
                                         </svg>
-                                    </a>
+                                    </button>
                                     <ul aria-hidden="true" class="ei-mn-sub" id="mobile-projects-submenu" inert="">
                                         <li><a href="infrastrukturni-objekti.html">Инфраструктурни објекти</a></li>
                                         <li><a href="hidrogradba.html">Хидроградба</a></li>
@@ -260,8 +283,6 @@
                                         class="ip-anc-dot"></span>Преглед</a>
                                 <a class="ip-anc" href="#zgradi"><span aria-hidden="true"
                                         class="ip-anc-dot"></span>Згради</a>
-                                <a class="ip-anc" href="#katalozi"><span aria-hidden="true"
-                                        class="ip-anc-dot"></span>Каталози</a>
                                 <a class="ip-anc" href="#galerija"><span aria-hidden="true"
                                         class="ip-anc-dot"></span>Галерија</a>
                             </div>
@@ -279,7 +300,7 @@
                                             цени и каталози, контактирајте го нашиот тим.</p>
                                         <div class="rz-overview-actions">
                                             <a class="ei-btn-primary" href="#zgradi">Види ги зградите</a>
-                                            <a class="ei-btn-outline" href="#katalozi">Отвори каталози</a>
+                                            <a class="ei-btn-primary" href="#katalozi">Отвори каталози</a>
                                         </div>
                                     </div>
                                     <div aria-label="Клучни информации" class="rz-overview-panel">
@@ -311,244 +332,47 @@
                                     <p class="ei-section-subtitle">Разгледајте ги нашите станбени проекти и
                                         контактирајте нè за повеќе информации.</p>
                                 </header>
-                                <div class="rz-building-grid">
-                                    <article class="rz-building-card">
-                                        <div class="rz-card-media">
-                                            <div aria-label="Галерија: Станбена зграда 2020"
-                                                class="ip-gallery g1 rz-card-gallery" data-gallery="stanbena-2020"
-                                                data-title="Станбена зграда Еуроинг — каталог 2020" role="group">
-                                                <div aria-label="Отвори фотографија: Каталог 2020 — Станбена зграда Еуроинг"
-                                                    class="ip-gi" data-caption="Каталог 2020 — Станбена зграда Еуроинг"
-                                                    data-src="project_images/stambeni/catalog-stanovi-2020-cover.webp"
-                                                    role="button" tabindex="0">
-                                                    <img alt="Каталог 2020 — Станбена зграда Еуроинг" decoding="async"
-                                                        height="628" loading="lazy"
-                                                        src="project_images/stambeni/catalog-stanovi-2020-cover.webp"
-                                                        width="900">
-                                                    <div aria-hidden="true" class="ip-gi-overlay">
-                                                        <div class="ip-gi-overlay-inner"><span
-                                                                class="ip-gi-caption">Отвори галерија</span><span
-                                                                class="ip-gi-expand"><i
-                                                                    class="fal fa-expand-alt"></i></span></div>
-                                                    </div>
-                                                </div>
-                                                <div aria-label="Отвори фотографија: Ентериер — дневна зона"
-                                                    class="ip-gi" data-caption="Ентериер — дневна зона"
-                                                    data-src="project_images/stambeni/zgrada-interior-01.jpg"
-                                                    role="button" tabindex="0"></div>
-                                                <div aria-label="Отвори фотографија: Ентериер — кујна и дневна"
-                                                    class="ip-gi" data-caption="Ентериер — кујна и дневна"
-                                                    data-src="project_images/stambeni/zgrada-interior-02.jpg"
-                                                    role="button" tabindex="0"></div>
-                                            </div>
-                                        </div>
-                                        <div class="rz-card-body">
-                                            <span class="rz-card-kicker">Станбена зграда · Гевгелија</span>
-                                            <h3>Каталог за станови 2020</h3>
-                                            <p>Станбена зграда со подрум, приземје, 4 катови и поткровје, поставена како
-                                                функционален семеен комплекс во близина на градскиот пазар, основното
-                                                училиште и градинката.</p>
-                                            <div class="rz-meta-row"><span>48
-                                                    станови</span><span>36–78m²</span><span>П+Пр+4+Пк</span></div>
-                                            <div class="rz-card-actions">
-                                                <a class="rz-link-btn"
-                                                    href="documents/stambeni/euroing-katalog-stanovi-2020.pdf"
-                                                    rel="noopener" target="_blank">Отвори PDF</a>
-                                                <a class="rz-link-btn muted" href="#galerija">Галерија</a>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="rz-building-card">
-                                        <div class="rz-card-media">
-                                            <div aria-label="Галерија: Станбено-деловен објект 2019"
-                                                class="ip-gallery g1 rz-card-gallery"
-                                                data-gallery="stanbeno-deloven-2019"
-                                                data-title="Станбено-деловен објект — каталог 2019" role="group">
-                                                <div aria-label="Отвори фотографија: Каталог 2019 — Станбено-деловен објект"
-                                                    class="ip-gi" data-caption="Каталог 2019 — Станбено-деловен објект"
-                                                    data-src="project_images/stambeni/catalog-2019-cover.jpg"
-                                                    role="button" tabindex="0">
-                                                    <img alt="Каталог 2019 — Станбено-деловен објект" decoding="async"
-                                                        height="633" loading="lazy"
-                                                        src="project_images/stambeni/catalog-2019-cover.jpg"
-                                                        width="900">
-                                                    <div aria-hidden="true" class="ip-gi-overlay">
-                                                        <div class="ip-gi-overlay-inner"><span
-                                                                class="ip-gi-caption">Отвори галерија</span><span
-                                                                class="ip-gi-expand"><i
-                                                                    class="fal fa-expand-alt"></i></span></div>
-                                                    </div>
-                                                </div>
-                                                <div aria-label="Отвори фотографија: Ентериер — простор за дневна и трпезарија"
-                                                    class="ip-gi"
-                                                    data-caption="Ентериер — простор за дневна и трпезарија"
-                                                    data-src="project_images/stambeni/zgrada-interior-03.jpg"
-                                                    role="button" tabindex="0"></div>
-                                                <div aria-label="Отвори фотографија: Ентериер — визуелизација"
-                                                    class="ip-gi" data-caption="Ентериер — визуелизација"
-                                                    data-src="project_images/stambeni/zgrada-interior-04.jpg"
-                                                    role="button" tabindex="0"></div>
-                                            </div>
-                                        </div>
-                                        <div class="rz-card-body">
-                                            <span class="rz-card-kicker">Станбено-деловен објект</span>
-                                            <h3>Каталог 2019</h3>
-                                            <p>Комбиниран објект со деловни простории во приземје и станови на горните
-                                                катови — добар начин да се прикаже и комерцијалната и станбената
-                                                вредност.</p>
-                                            <div class="rz-meta-row"><span>32
-                                                    станови</span><span>50–81m²</span><span>подрум + партер</span></div>
-                                            <div class="rz-card-actions">
-                                                <a class="rz-link-btn"
-                                                    href="documents/stambeni/euroing-katalog-2019.pdf" rel="noopener"
-                                                    target="_blank">Отвори PDF</a>
-                                                <a class="rz-link-btn muted" href="#galerija">Галерија</a>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="rz-building-card">
-                                        <div class="rz-card-media">
-                                            <div aria-label="Галерија: Станбена зграда различни распореди"
-                                                class="ip-gallery g1 rz-card-gallery" data-gallery="stanbena-52"
-                                                data-title="Станбена зграда — различни распореди" role="group">
-                                                <div aria-label="Отвори фотографија: Каталог — Станбена зграда со различни распореди"
-                                                    class="ip-gi"
-                                                    data-caption="Каталог — Станбена зграда со различни распореди"
-                                                    data-src="project_images/stambeni/catalog-stanovi-52-cover.webp"
-                                                    role="button" tabindex="0">
-                                                    <img alt="Каталог — Станбена зграда со различни распореди"
-                                                        decoding="async" height="651" loading="lazy"
-                                                        src="project_images/stambeni/catalog-stanovi-52-cover.webp"
-                                                        width="900">
-                                                    <div aria-hidden="true" class="ip-gi-overlay">
-                                                        <div class="ip-gi-overlay-inner"><span
-                                                                class="ip-gi-caption">Отвори галерија</span><span
-                                                                class="ip-gi-expand"><i
-                                                                    class="fal fa-expand-alt"></i></span></div>
-                                                    </div>
-                                                </div>
-                                                <div aria-label="Отвори фотографија: Ентериер — дневна зона"
-                                                    class="ip-gi" data-caption="Ентериер — дневна зона"
-                                                    data-src="project_images/stambeni/zgrada-interior-05.jpg"
-                                                    role="button" tabindex="0"></div>
-                                                <div aria-label="Отвори фотографија: Ентериер — голем отворен простор"
-                                                    class="ip-gi" data-caption="Ентериер — голем отворен простор"
-                                                    data-src="project_images/stambeni/zgrada-interior-06.webp"
-                                                    role="button" tabindex="0"></div>
-                                            </div>
-                                        </div>
-                                        <div class="rz-card-body">
-                                            <span class="rz-card-kicker">Станбен комплекс</span>
-                                            <h3>Каталог за станови · 52 единици</h3>
-                                            <p>Најсилниот каталог за типологија: двособни, трособни и четворособни
-                                                станови со јасен распон на квадратури и подрумско/партер паркирање.</p>
-                                            <div class="rz-meta-row"><span>52
-                                                    станови</span><span>58–111m²</span><span>типологија</span></div>
-                                            <div class="rz-card-actions">
-                                                <a class="rz-link-btn"
-                                                    href="documents/stambeni/euroing-katalog-stanovi-52.pdf"
-                                                    rel="noopener" target="_blank">Отвори PDF</a>
-                                                <a class="rz-link-btn muted" href="#galerija">Галерија</a>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="rz-building-card">
-                                        <div class="rz-card-media">
-                                            <div aria-label="Галерија: Станбена зграда 4"
-                                                class="ip-gallery g1 rz-card-gallery" data-gallery="zgrada-4"
-                                                data-title="Станбена зграда 4 — планови" role="group">
-                                                <div aria-label="Отвори фотографија: Екстериер — станбена зграда"
-                                                    class="ip-gi" data-caption="Екстериер — станбена зграда"
-                                                    data-src="project_images/stambeni/zgrada-main-exterior.webp"
-                                                    role="button" tabindex="0">
-                                                    <img alt="Екстериер на станбена зграда" decoding="async"
-                                                        height="1365" loading="lazy"
-                                                        src="project_images/stambeni/zgrada-main-exterior.webp"
-                                                        width="2048">
-                                                    <div aria-hidden="true" class="ip-gi-overlay">
-                                                        <div class="ip-gi-overlay-inner"><span
-                                                                class="ip-gi-caption">Отвори галерија</span><span
-                                                                class="ip-gi-expand"><i
-                                                                    class="fal fa-expand-alt"></i></span></div>
-                                                    </div>
-                                                </div>
-                                                <div aria-label="Отвори фотографија: Планови — Зграда 4" class="ip-gi"
-                                                    data-caption="Планови — Зграда 4"
-                                                    data-src="project_images/stambeni/catalog-zgrada-4-cover.webp"
-                                                    role="button" tabindex="0"></div>
-                                                <div aria-label="Отвори фотографија: Екстериер — вертикална фотографија"
-                                                    class="ip-gi" data-caption="Екстериер — вертикална фотографија"
-                                                    data-src="project_images/stambeni/zgrada-exterior-phone-01.jpg"
-                                                    role="button" tabindex="0"></div>
-                                                <div aria-label="Отвори фотографија: Екстериер — агол на фасада"
-                                                    class="ip-gi" data-caption="Екстериер — агол на фасада"
-                                                    data-src="project_images/stambeni/zgrada-exterior-phone-02.jpg"
-                                                    role="button" tabindex="0"></div>
-                                            </div>
-                                        </div>
-                                        <div class="rz-card-body">
-                                            <span class="rz-card-kicker">Станбена зграда</span>
-                                            <h3>Зграда 4 · планови на станови</h3>
-                                            <p>Овој каталог е најдобро да се прикаже како плански каталог: посетителот
-                                                веднаш треба да отвори PDF и да ги разгледа распоредите на становите.
-                                            </p>
-                                            <div class="rz-meta-row">
-                                                <span>планови</span><span>32–90m²</span><span>PDF</span>
-                                            </div>
-                                            <div class="rz-card-actions">
-                                                <a class="rz-link-btn"
-                                                    href="documents/stambeni/euroing-katalog-zgrada-4.pdf"
-                                                    rel="noopener" target="_blank">Отвори PDF</a>
-                                                <a class="rz-link-btn muted" href="#galerija">Галерија</a>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
+                                <ul class="rz-building-list" id="katalozi">
+                                    <li><a href="documents/stambeni/euroing-katalog-stanovi-2020.pdf" target="_blank"
+                                            rel="noopener"
+                                            aria-label="Зграда 1 — Отвори PDF (се отвора во нов таб)"><span
+                                                class="rz-building-name">Зграда 1</span><span
+                                                class="rz-building-action">Отвори PDF<svg aria-hidden="true" width="20"
+                                                    height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="1.8">
+                                                    <path d="M7 17 17 7M7 7h10v10" />
+                                                </svg></span></a></li>
+                                    <li><a href="documents/stambeni/euroing-katalog-2019.pdf" target="_blank"
+                                            rel="noopener"
+                                            aria-label="Зграда 2 — Отвори PDF (се отвора во нов таб)"><span
+                                                class="rz-building-name">Зграда 2</span><span
+                                                class="rz-building-action">Отвори PDF<svg aria-hidden="true" width="20"
+                                                    height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="1.8">
+                                                    <path d="M7 17 17 7M7 7h10v10" />
+                                                </svg></span></a></li>
+                                    <li><a href="documents/stambeni/euroing-katalog-stanovi-52.pdf" target="_blank"
+                                            rel="noopener"
+                                            aria-label="Зграда 3 — Отвори PDF (се отвора во нов таб)"><span
+                                                class="rz-building-name">Зграда 3</span><span
+                                                class="rz-building-action">Отвори PDF<svg aria-hidden="true" width="20"
+                                                    height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="1.8">
+                                                    <path d="M7 17 17 7M7 7h10v10" />
+                                                </svg></span></a></li>
+                                    <li><a href="documents/stambeni/euroing-katalog-zgrada-4.pdf" target="_blank"
+                                            rel="noopener"
+                                            aria-label="Зграда 4 — Отвори PDF (се отвора во нов таб)"><span
+                                                class="rz-building-name">Зграда 4</span><span
+                                                class="rz-building-action">Отвори PDF<svg aria-hidden="true" width="20"
+                                                    height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="1.8">
+                                                    <path d="M7 17 17 7M7 7h10v10" />
+                                                </svg></span></a></li>
+                                </ul>
                             </div>
                         </section>
-                        <section aria-labelledby="heading-katalozi" class="ip-project-section rz-catalogs"
-                            id="katalozi">
-                            <div class="ei-container-wide">
-                                <header class="ei-section-header">
-                                    <span class="ei-section-label">PDF материјали</span>
-                                    <h2 id="heading-katalozi">Каталози за станови</h2>
-                                    <p class="ei-section-subtitle">Овде посетителот не треба да бара низ страницата —
-                                        сите PDF фајлови се собрани како јасни download/open картички.</p>
-                                </header>
-                                <div class="rz-catalog-grid">
-                                    <a class="rz-catalog-card"
-                                        href="documents/stambeni/euroing-katalog-stanovi-2020.pdf" rel="noopener"
-                                        target="_blank">
-                                        <img alt="Каталог за станови 2020" decoding="async" height="628" loading="lazy"
-                                            src="project_images/stambeni/catalog-stanovi-2020-cover.webp" width="900">
-                                        <div><span>PDF каталог</span><strong>Станбена зграда · 2020</strong><em>48
-                                                станови · 36–78m²</em></div>
-                                    </a>
-                                    <a class="rz-catalog-card" href="documents/stambeni/euroing-katalog-2019.pdf"
-                                        rel="noopener" target="_blank">
-                                        <img alt="Каталог 2019" decoding="async" height="633" loading="lazy"
-                                            src="project_images/stambeni/catalog-2019-cover.jpg" width="900">
-                                        <div><span>PDF каталог</span><strong>Станбено-деловен објект</strong><em>32
-                                                станови · 50–81m²</em></div>
-                                    </a>
-                                    <a class="rz-catalog-card" href="documents/stambeni/euroing-katalog-stanovi-52.pdf"
-                                        rel="noopener" target="_blank">
-                                        <img alt="Каталог за станови 52 единици" decoding="async" height="651"
-                                            loading="lazy" src="project_images/stambeni/catalog-stanovi-52-cover.webp"
-                                            width="900">
-                                        <div><span>PDF каталог</span><strong>Станбена зграда · 52
-                                                станови</strong><em>58–111m² · типологии</em></div>
-                                    </a>
-                                    <a class="rz-catalog-card" href="documents/stambeni/euroing-katalog-zgrada-4.pdf"
-                                        rel="noopener" target="_blank">
-                                        <img alt="Каталог Зграда 4" decoding="async" height="1273" loading="lazy"
-                                            src="project_images/stambeni/catalog-zgrada-4-cover.webp" width="900">
-                                        <div><span>PDF каталог</span><strong>Зграда 4 · планови</strong><em>планови на
-                                                станови</em></div>
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
+
                         <section aria-labelledby="heading-galerija" class="ip-project-section rz-gallery-section"
                             id="galerija">
                             <div class="ei-container-wide">
@@ -898,7 +722,7 @@
             sectionObserver.observe(section);
         });
     </script>
-    <script defer src="js/site.js?v=2.1.0"></script>
+    <script defer src="js/site.js?v=2.2.1"></script>
     <button class="ei-scroll-top" type="button" aria-label="Назад на почеток" hidden><svg aria-hidden="true" width="24"
             height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="m5 12 7-7 7 7M12 5v14"></path>
