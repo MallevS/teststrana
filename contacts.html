@@ -85,7 +85,7 @@
     }
   ]
 }</script>
-    <link href="css/site.css?v=2.2.2" rel="stylesheet">
+    <link href="css/site.css?v=2.2.4" rel="stylesheet">
     <link rel="alternate" hreflang="mk" href="https://www.euroing.com.mk/contacts.html">
     <link rel="alternate" hreflang="en" href="https://www.euroing.com.mk/en/contacts.html">
     <link rel="alternate" hreflang="x-default" href="https://www.euroing.com.mk/contacts.html"><noscript>
@@ -295,7 +295,7 @@
                                     <p class="ei-hero-sub">За прашања, понуди и соработка, пишете ни или јавете се.
                                         Нашиот тим ќе ви одговори во најкус можен рок.</p>
                                     <div class="ei-hero-btns">
-                                        <a class="ei-btn-primary" href="#contact-form-scroll">Испрати Порака <svg
+                                        <a class="ei-btn-primary" href="mailto:contact@euroing.com.mk">Пишете ни <svg
                                                 fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 24 24">
                                                 <path
@@ -396,68 +396,57 @@
                                 </div>
                             </div>
                         </section>
-                        <!-- ==================== FORM + MAP SECTION ==================== -->
-                        <section class="ei-contact-section" id="contact-form-scroll">
+                        <!-- ==================== EMAIL + MAP SECTION ==================== -->
+                        <section class="ei-contact-section" id="contact-email" aria-labelledby="contact-email-title">
                             <div class="ei-contact-grid">
-                                <!-- Form Column -->
-                                <div class="ei-contact-form-col">
-                                    <div class="ei-contact-form-header">
-                                        <span class="ei-form-label">КОНТАКТ ФОРМА</span>
-                                        <h2>Испратете Порака</h2>
-                                        <p>Пополнете го формуларот и ќе ви одговориме во најкус можен рок. Сите прашања
-                                            се добредојдени.</p>
+                                <div class="ei-contact-email-card">
+                                    <div class="ei-contact-card-top">
+                                        <span class="ei-contact-mail-icon" aria-hidden="true">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" focusable="false">
+                                                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                                <path d="m3 7 9 6 9-6"></path>
+                                            </svg>
+                                        </span>
+                                        <span class="ei-contact-kicker">Директен контакт</span>
                                     </div>
-                                    <form accept-charset="UTF-8" action="contact.php" class="ei-contact-form"
-                                        id="contact-form" method="post">
-                                        <div aria-hidden="true" class="visually-hidden"><label for="website">Оставете го
-                                                ова поле
-                                                празно</label><input autocomplete="off" id="website" name="website"
-                                                tabindex="-1" type="text">
-                                        </div>
-                                        <div class="ei-form-row">
-                                            <div class="ei-form-field">
-                                                <label for="name">ИМЕ И ПРЕЗИМЕ</label>
-                                                <input autocomplete="name" id="name" inputmode="name" name="name"
-                                                    placeholder="Вашето име" required="" type="text">
-                                            </div>
-                                            <div class="ei-form-field">
-                                                <label for="company">КОМПАНИЈА</label>
-                                                <input autocomplete="organization" id="company" name="company"
-                                                    placeholder="Назив на компанија" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="ei-form-row">
-                                            <div class="ei-form-field">
-                                                <label for="phone">ТЕЛЕФОН</label>
-                                                <input autocomplete="tel" id="phone" inputmode="tel" name="phone"
-                                                    placeholder="+389 ..." type="tel">
-                                            </div>
-                                            <div class="ei-form-field">
-                                                <label for="email">E-MAIL</label>
-                                                <input autocomplete="email" id="email" inputmode="email" name="email"
-                                                    placeholder="vasa@email.com" required="" type="email">
-                                            </div>
-                                        </div>
-                                        <div class="ei-form-field ei-form-field-full">
-                                            <label for="message">ПОРАКА</label>
-                                            <textarea id="message" maxlength="5000" minlength="10" name="message"
-                                                placeholder="Опишете го вашето барање..." required=""
-                                                rows="5"></textarea>
-                                        </div>
-                                        <button class="ei-contact-btn" type="submit">
-                                            Испрати Порака <i class="fal fa-arrow-right"></i>
-                                        </button>
-                                        <div aria-live="polite" class="ei-form-status" id="contact-form-status"
-                                            role="status"></div>
-                                        <input type="hidden" name="lang" value="mk">
-                                    </form>
+                                    <h2 id="contact-email-title">Да разговараме за вашиот проект.</h2>
+                                    <p class="ei-contact-intro">За прашања, понуди и соработка, пишете ни.</p>
+                                    <p class="ei-contact-email-address">contact@<wbr>euroing.com.mk</p>
+                                    <div class="ei-contact-email-actions">
+                                        <a class="ei-contact-btn" href="mailto:contact@euroing.com.mk"
+                                            aria-describedby="contact-email-note">
+                                            Напишете порака
+                                            <svg aria-hidden="true" focusable="false" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M7 17 17 7M7 7h10v10"></path>
+                                            </svg>
+                                        </a>
+                                        <p class="ei-contact-email-note" id="contact-email-note">Ќе се отвори вашата апликација за е-пошта.</p>
+                                    </div>
                                 </div>
                                 <!-- Map Column -->
                                 <div class="ei-contact-map-col">
+                                    <div class="ei-contact-map-header">
+                                        <h3>Посетете нè во Гевгелија</h3>
+                                        <p>Нова Лок. Блокотехна 16 · 1480 Гевгелија</p>
+                                    </div>
                                     <iframe allowfullscreen="" aria-busy="true"
                                         data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.3471841895057!2d22.498159534719502!3d41.17026839927075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135623bfba539b6d%3A0x1d24e2669b197e02!2sEuroing!5e0!3m2!1smk!2smk!4v1646752396340!5m2!1smk!2smk"
                                         loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="about:blank"
                                         title="ЕУРОИНГ локација на карта"></iframe>
+                                    <a class="ei-contact-map-link"
+                                        href="https://www.google.com/maps?cid=2100052256578174466"
+                                        target="_blank" rel="noopener">
+                                        Отвори во Google Maps<span class="visually-hidden"> (се отвора во нов таб)</span>
+                                        <svg aria-hidden="true" focusable="false" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M7 17 17 7M7 7h10v10"></path>
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
                         </section>
@@ -469,7 +458,7 @@
                                     <h2>Сакате да остварите<br> <span>соработка</span> со нас?</h2>
                                     <p>Контактирајте нè за консултации, понуди и информации за нашите услуги.</p>
                                     <div class="ei-cta-btns">
-                                        <a class="ei-btn-primary" href="contacts.html">Контактирај нè</a>
+                                        <a class="ei-btn-primary" href="mailto:contact@euroing.com.mk">Пишете ни</a>
                                         <a class="ei-btn-outline"
                                             href="documents/stambeni/euroing-katalog-stanovi-2020.pdf" target="_blank"
                                             rel="noopener">Каталог за станови</a>
@@ -500,7 +489,7 @@
             </div><!-- content-holder end -->
         </div><!-- wrapper end -->
     </div><!-- main end -->
-    <script defer src="js/site.js?v=2.2.1"></script>
+    <script defer src="js/site.js?v=2.2.4"></script>
     <button class="ei-scroll-top" type="button" aria-label="Назад на почеток" hidden><svg aria-hidden="true" width="24"
             height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="m5 12 7-7 7 7M12 5v14"></path>

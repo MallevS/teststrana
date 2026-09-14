@@ -25,7 +25,7 @@
 @media(max-width:768px){header.main-header{gap:8px!important;padding-inline:10px!important}.header-logo img{max-width:110px;height:auto!important}.ei-language-switch{padding:2px;gap:0}.ei-language-switch a{min-width:44px;min-height:44px;padding-inline:4px}.nav-button-wrap{flex-shrink:0}.nav-button{min-width:44px;min-height:44px}.ip-text-project .ip-project-block{padding:22px}.ei-hero-pause{right:16px;bottom:16px}.ei-scroll-top{right:16px;bottom:max(16px,env(safe-area-inset-bottom))}.ei-hero-h1{overflow-wrap:break-word}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 /* Let translated content and enlarged text determine the hero height. */
-.ei-hero{height:auto;min-height:100vh;min-height:100dvh;padding:100px 0 80px;box-sizing:border-box}
+.ei-hero{height:auto;min-height:100dvh;padding:100px 0 80px;box-sizing:border-box}
 .ei-hero-body{padding-block:0}
 .ei-hero-h1 .l1{font-size:clamp(32px,5.5vw,72px)}
 .ei-nav-dropdown a{color:#251b48;min-height:44px;display:flex;align-items:center}

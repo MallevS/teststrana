@@ -380,45 +380,6 @@
         });
     }
 
-    function initContactForm() {
-        const form = document.getElementById('contact-form');
-        if (!form) return;
-        const status = document.getElementById('contact-form-status');
-        const submit = form.querySelector('button[type="submit"]');
-
-        form.addEventListener('submit', async function (event) {
-            event.preventDefault();
-            if (!form.reportValidity()) return;
-            if (status) {
-                status.className = 'ei-form-status is-pending';
-                status.textContent = text('Пораката се испраќа…', 'Sending your message…');
-            }
-            if (submit) submit.disabled = true;
-
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: new FormData(form),
-                    headers: { 'Accept': 'application/json' }
-                });
-                const payload = await response.json().catch(function () { return {}; });
-                if (!response.ok || payload.ok !== true) throw new Error(payload.message || text('Пораката не беше испратена.', 'Your message could not be sent.'));
-                form.reset();
-                if (status) {
-                    status.className = 'ei-form-status is-success';
-                    status.textContent = payload.message || text('Ви благодариме. Пораката е успешно испратена.', 'Thank you. Your message was sent successfully.');
-                }
-            } catch (error) {
-                if (status) {
-                    status.className = 'ei-form-status is-error';
-                    status.textContent = (error instanceof TypeError ? text('Нема врска со серверот. Обидете се повторно или јавете ни се.', 'Unable to connect. Please try again or call us.') : error.message) || text('Настана грешка. Обидете се повторно или контактирајте нè по телефон.', 'Something went wrong. Please try again or call us.');
-                }
-            } finally {
-                if (submit) submit.disabled = false;
-            }
-        });
-    }
-
     function initLanguageMenu() {
         document.querySelectorAll('.ei-language-menu').forEach(function (menu) {
             document.addEventListener('click', function (event) {
@@ -468,6 +429,5 @@
         initHeroSlideshows();
 
         initLazyMaps();
-        initContactForm();
     });
 }());
