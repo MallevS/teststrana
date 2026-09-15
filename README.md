@@ -4,6 +4,8 @@ This package contains the existing static website updated in Macedonian and Engl
 
 ## What changed
 
+- Final bilingual review: synchronized English Services and the wastewater-treatment gallery with the latest Macedonian pages, corrected English project labels, and matched the apartment-hero catalogue link behavior.
+- Corrected the declared dimensions of four transport photos in both languages. Matched the hero indicators and counters to the seven existing slides on the home, contact and services pages in both languages; the slide timing is unchanged.
 - Contact pages now use a styled email card and native `mailto:contact@euroing.com.mk` links in Macedonian and English. The address stays visible for copying, and a short note explains that the button opens the visitor's email app. The map includes a location header and a direct Google Maps link. There are no contact form fields or submission requests.
 - Updated the existing `css/site.css` and removed the unused form submission code from `js/site.js`. Both assets use version `2.2.4` to avoid stale cached styles/scripts. The former `contact.php` endpoint only redirects to the contact page and does not send email.
 - Corrected four existing accessibility labels on the infrastructure pages: their referenced headings were commented out in the supplied ZIP. The sections now have direct labels using those same titles.
@@ -26,9 +28,9 @@ The four existing apartment catalogue PDFs are retained under `documents/stamben
 
 ## Verification completed
 
-All 20 pages passed local checks for links and fragments, referenced assets, unique IDs, ARIA references, JavaScript syntax, JSON and sitemap XML. The project pages contain verified archive-backed galleries for infrastructure and hydraulic works; no broken local asset references remain.
+All 20 pages passed local checks covering 1,248 local references, links and fragments, referenced assets, unique IDs, ARIA references, JavaScript syntax, CSS resources and delimiters, JSON, SVG and sitemap XML. All 224 raster images and 21 PDF files passed file-integrity checks. No errors or warnings remained in these checks.
 
-For this contact update, checked all 1,258 local HTML references, removed-form references, preserved email recipients, the new SVG accessible labels, CSS delimiters and JavaScript syntax. New contact-section text colors have calculated contrast ratios of at least 6.44:1 against their base backgrounds. The native email link uses no JavaScript and makes no website form submission request.
+Compared all 10 Macedonian/English page pairs, including project lists, galleries, numerical figures, dates, labels and certificate links. Verified all 40 header language links resolve to the matching page. Image and PDF files, CSS, shared JavaScript and server configuration are byte-for-byte unchanged from the latest uploaded ZIP. Contact pages retain native email links to contact@euroing.com.mk and contain no form.
 
 ## Before public launch
 
